@@ -10,6 +10,7 @@ function Inputs() {
       <input
         type="text"
         value={text}
+        maxLength={20}
         onChange={(e) => setText(e.target.value)}
       />
 
