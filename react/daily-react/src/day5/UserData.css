@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(212, 212, 212);
+}
+
+h1 {
+  color: teal;
+}
+
+input {
+  padding: 0.6em 1.2em;
+  font-size: 1.2em;
+  border-radius: 6px;
+  border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+button {
+  margin-left: 5px;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;      /* vertical alignment */
+  margin-bottom: 5px;       /* spacing between rows */
+}
+
+.list-item {
+  background-color: rgba(0, 128, 128, 0.479);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0;                /* remove default li margin */
+  flex: 1;                  /* take remaining space */
+}
+
+.delete-btn {
+  margin-left: 10px;        /* space between li and button */
+}
