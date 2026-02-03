@@ -6,6 +6,7 @@ import Inputs from "./day2/Inputs & Controlled State/Inputs";
 import List from "./day3/List/List";
 import DynamicList from "./day4/DynamicList";
 import UserData from "./day5/UserData";
+import UserList from "./day6/UserList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,8 +16,9 @@ function App() {
       {/* 
       <Inputs/>
       <List/>
-      <DynamicList/> */}
-      <UserData/>
+      <DynamicList/>
+      <UserData/> */}
+      <UserList/>
     </div>
   );
 }
