@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(212, 212, 212);
+}
+
+h1 {
+  color: teal;
+}
+
+input {
+  width: 20vw;
+  margin-left: 40px;
+  border-radius: 6px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  margin-left: 5px;
+}
+
+li {
+  background-color: aquamarine;
+  padding: 0 0 0 10px;
+  border-radius: 8px;
+  cursor: default;
+  list-style-type: disc; /* <-- Added: Forces dots on every <li> */
+}
+
+.list-row {
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: space-between; /* text left, icon right */
+  background-color: rgba(0, 128, 128, 0.479);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.list-text {
+  flex: 1; /* text takes all remaining space */
+}
+
+.delete-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #444;
+  font-size: 1.2em;
+}
+
+.delete-icon:hover {
+  color: crimson;
+}
