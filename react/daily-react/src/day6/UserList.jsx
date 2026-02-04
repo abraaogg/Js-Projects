@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./UserList.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function UserList() {
   const [item, setItem] = useState("");
@@ -8,35 +10,39 @@ function UserList() {
   return (
     <div>
       <h1>List</h1>
-      <input
-        type="text"
-        value={item}
-        onChange={(e) => setItem(e.target.value)}
-      />
-      <button
-        onClick={() => {
-          setList([...list, item]);
-          setItem("");
-        }}
-      >
-        Save
-      </button>
+     <div>
+  <input
+    type="text"
+    value={item}
+    onChange={(e) => setItem(e.target.value)}
+  />
+  <button
+    disabled={item.trim() === ""}
+    onClick={() => {
+      const trimmedItem = item.trim();
+      setList([...list, trimmedItem]);
+      setItem("");
+    }}
+  >
+    Save
+  </button>
 
-      <ul>
-        <div className="list-row">
-          {list.map((item, index) => (
-            <div key={index} className="list-item">
-              <li>{item}</li>
-              <button
-                className="delete-btn"
-                onClick={() => setList(list.filter((_, i) => i !== index))}
-              >
-                Delete
-              </button>
-            </div>
-          ))}
-        </div>
-      </ul>
+  {list.length === 0 && <p>No items yet</p>}
+
+  <ul>
+    {list.map((item, index) => (
+      <li key={index} className="list-row">
+        <span className="list-text">{item}</span>
+        <FontAwesomeIcon
+          icon={faTrash}
+          className="delete-icon"
+          onClick={() => setList(list.filter((_, i) => i !== index))}
+        />
+      </li>
+    ))}
+  </ul>
+</div>
+
     </div>
   );
 }
