@@ -13,7 +13,6 @@ function Inputs1({ addItem }) {
     addItem({ name, category });
     setName("");
     setCategory("");
-    setErrorMessage("");
   }
 
   return (

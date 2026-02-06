@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(212, 212, 212);
+}
+
+h1 {
+  color: rgb(48, 173, 136);
+}
+
+input {
+  width: 20vw;
+  padding: 14px;
+  margin-left: 40px;
+  border-radius: 6px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 8px;
+  margin-left: 5px;
+}
+
+li {
+  background-color: #a0a0a0b2;
+  padding: 0 0 0 10px;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.list-row {
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: space-between; /* text left, icon right */
+  background-color: rgba(0, 128, 128, 0.479);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.list-text {
+  flex: 1; /* text takes all remaining space */
+}
+
+.delete-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #444;
+  font-size: 1.2em;
+}
+
+.delete-icon:hover {
+  color: crimson;
+}
+
+.add-btn:disabled {
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+}
