@@ -6,8 +6,8 @@ function Effect() {
     setCount(count + 1);
   };
   useEffect(() => {
-    console.log("mounted")
-  }, []);
+    console.log(count)
+  }, [count]);
 
   return (
     <div>
