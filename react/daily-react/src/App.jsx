@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import ShoppingList from "./day8/ShoppingList";
-import InputId from "./day9/InputId";
-import Mini from "./day10/Mini";
+import MiniFetch from "./day11/MiniFetch";
 
 function App() {
   return (
@@ -16,9 +14,9 @@ function App() {
       <UserList2/>
       <ShoppingList/>
       <InputId />
+        <Mini/>
       */}
-      <Mini/>
-      
+      <MiniFetch/>
     </div>
   );
 }
