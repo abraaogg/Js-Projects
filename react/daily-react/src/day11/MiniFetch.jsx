@@ -14,7 +14,7 @@ function MiniFetch() {
         setLoading(false);
       });
   }, []);
-  
+
   if (loading) {
     return <div>Loading...</div>;
   }
