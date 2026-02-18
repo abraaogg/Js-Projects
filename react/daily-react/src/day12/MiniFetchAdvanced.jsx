@@ -17,30 +17,31 @@ function MiniFetchAdvanced() {
       } finally {
         setLoading(false);
       }
-      const filteredData = data.filter((user) =>
-        user.name.toLowerCase().includes(search.toLowerCase()),
-      );
     };
     fetchData();
   }, []);
+  const filteredData = data.filter((user) =>
+    user.name.toLowerCase().includes(search.toLowerCase()),
+  );
 
-  if (loading)
-    return (
-      <div>
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <ul>
-          {filteredData.length === 0 ? (
-            <li>No users found</li>
-          ) : (
-            filteredData.map((user) => <li key={user.id}>{user.name}</li>)
-          )}
-        </ul>
-      </div>
-    );
+  if (loading) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <ul>
+        {filteredData.length === 0 ? (
+          <li>No users found</li>
+        ) : (
+          filteredData.map((user) => <li key={user.id}>{user.name}</li>)
+        )}
+      </ul>
+    </div>
+  );
 }
 
 export default MiniFetchAdvanced;
