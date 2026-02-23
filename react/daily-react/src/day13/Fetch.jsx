@@ -8,7 +8,7 @@ function Fetch() {
   useEffect(() => {}, []);
   return (
     <div>
-      <input type="text" value={search} onChange={(e) => e.target.value} />
+      <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
     </div>
   );
 }
