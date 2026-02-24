@@ -2,6 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Todo from "./components/Todo";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -31,13 +33,10 @@ function App() {
         <h1>Lista de Tarefas</h1>
         <div className="todo-list">
           {todos.map((todo) => (
-            <div className="todo">
-              <div className="content">
-                <p>{todo.text}</p>
-              </div>
-            </div>
+           <Todo todo = {todo}/>
           ))}
         </div>
+        <TodoForm/>
       </div>
     </>
   );
