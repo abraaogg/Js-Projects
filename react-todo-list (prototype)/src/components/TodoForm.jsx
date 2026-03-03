@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-function TodoForm() {
+function TodoForm({addTodo}) {
   const [value, setValue] = useState("");
   const [category, setCategory] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value || !category) return;
-    console.log(value, category);
+    addTodo(value, category)
     // clean input field
     setValue("");
     setCategory("");
