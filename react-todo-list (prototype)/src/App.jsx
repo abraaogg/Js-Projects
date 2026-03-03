@@ -51,9 +51,8 @@ function App() {
 
   const removeTodo = (id) => {
     const newTodos = [...todos];
-    const filteredTodos = newTodos.filter((todo) =>
-      todo.id !== id ? todo : null,
-    );
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+
     setTodos(filteredTodos);
   };
 
