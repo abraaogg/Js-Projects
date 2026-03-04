@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(216, 216, 216);
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;
+    height: 100vh;
+}
+
+.app {
+  background-color: aliceblue;
+  width: 60vw;
+  height: 80vh;
+  padding: 20px;
+}
