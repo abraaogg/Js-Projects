@@ -9,10 +9,18 @@ import Form from "./components/Form";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Study React"},
+    { id: 1, text: "Study React" },
     { id: 2, text: "Build Todo App" },
   ]);
 
+  function addTodo(text) {
+    const newTodo = {
+      id: Date.now(),
+      text: text,
+    };
+
+    setTodos([...todos, newTodo]);
+  }
   return (
     <>
       <div className="app">
@@ -20,7 +28,7 @@ function App() {
         <Search />
         <Filter />
         <List todos={todos} />
-        <Form/>
+        <Form addTodo={addTodo}/>
       </div>
     </>
   );

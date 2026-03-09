@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 
-function Form() {
+function Form({ addTodo }) {
   const [open, setOpen] = useState(false);
+  const [text, setText] = useState("");
   return (
     <div>
-        <h3>Add a new Todo</h3>
+      <h3>Add a new Todo</h3>
       {open ? (
         <div>
-          <input />
-          <button>Add</button>
+          <input value={text} onChange={(e) => setText(e.target.value)} />
+
+          <button
+            onClick={() => {
+              addTodo(text);
+              setText("")
+              setOpen(false);
+            }}
+          >
+            Add
+          </button>
         </div>
       ) : (
         <button onClick={() => setOpen(true)}>+</button>
