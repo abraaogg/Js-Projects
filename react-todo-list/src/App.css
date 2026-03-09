@@ -7,8 +7,9 @@ body {
 }
 
 .app {
-  background-color: aliceblue;
+  background-color: rgb(255, 253, 240);
   width: 60vw;
   height: 80vh;
   padding: 20px;
+  border-radius: 6px;
 }
