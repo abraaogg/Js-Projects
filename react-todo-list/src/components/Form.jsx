@@ -13,7 +13,7 @@ function Form({ addTodo }) {
           <button
             onClick={() => {
               addTodo(text);
-              setText("")
+              setText("");
               setOpen(false);
             }}
           >
