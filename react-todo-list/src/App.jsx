@@ -41,6 +41,12 @@ function App() {
       }),
     );
   }
+
+  function handleAddTodo() {
+    addTodo(text);
+    setText("");
+    setOpen(false);
+  }
   return (
     <>
       <div className="app">
@@ -48,7 +54,7 @@ function App() {
         <Search />
         <Filter />
         <List todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
-        <Form addTodo={addTodo} />
+        <Form addTodo={addTodo}/>
       </div>
     </>
   );
