@@ -21,7 +21,13 @@ function Header() {
         )}
       </menu>
 
-      <h1>Today Date</h1>
+      <h1>
+        Today:{" "}
+        {new Date().toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "long",
+        })}
+      </h1>
     </div>
   );
 }
