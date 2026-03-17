@@ -11,6 +11,7 @@ body {
 }
 
 .app {
+  position: relative;
   background-color: rgba(231, 231, 231, 0.849);
   width: 60vw;
   height: 80vh;
@@ -60,4 +61,29 @@ menu {
 .todoItem {
   display: flex;
   gap: 10px;
+}
+
+.createTodo {
+  position: absolute;
+
+  bottom: 20px; /* distance from bottom */
+  left: 50%; /* move to middle */
+  transform: translateX(-50%); /* perfectly center */
+}
+
+.add {
+  color: aliceblue;
+  background-color: #2b59c3;
+
+  width: 60px;
+  height: 60px;
+
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.add:hover {
+  color: #ccc;
 }
