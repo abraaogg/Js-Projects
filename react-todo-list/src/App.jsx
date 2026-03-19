@@ -7,15 +7,16 @@ import Header from "./components/Header";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Study React", completed: false },
-    { id: 2, text: "Build Todo App", completed: false },
+    { id: 1, text: "Study React", completed: false, category: "Personal" },
+    { id: 2, text: "Build Todo App", completed: false, category: "Work" },
   ]);
 
-  function addTodo(text) {
+  function addTodo(text, category) {
     const newTodo = {
       id: Date.now(),
       text: text,
       completed: false,
+      category: category,
     };
 
     setTodos([...todos, newTodo]);
@@ -39,14 +40,23 @@ function App() {
       }),
     );
   }
+  const [filter, setFilter] = useState("All");
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "All") return true;
+    return todo.category === filter;
+  });
 
   return (
     <>
       <div className="app">
         <Header />
-        <Filter />
+        <Filter onChangeFilter={setFilter} />
         <div className="content">
-          <List todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
+          <List
+            todos={filteredTodos}
+            deleteTodo={deleteTodo}
+            toggleTodo={toggleTodo}
+          />
         </div>
         <Form addTodo={addTodo} />
       </div>

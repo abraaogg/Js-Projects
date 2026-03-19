@@ -60,6 +60,14 @@ menu {
   outline: none;
 }
 
+.filter{
+  width: 160px;
+  padding: 6px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
 .todoItem {
   background-color: rgb(245, 245, 245);
   width: 40vw;

@@ -3,10 +3,11 @@ import React, { useState } from "react";
 function Form({ addTodo }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
+  const [category, setCategory] = useState("All");
 
   function handleAddTodo() {
     if (!text.trim()) return;
-    addTodo(text);
+    addTodo(text, category);
     setText("");
     setOpen(false);
   }
