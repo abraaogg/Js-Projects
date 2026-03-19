@@ -5,13 +5,13 @@ function Form({ addTodo }) {
   const [text, setText] = useState("");
 
   function handleAddTodo() {
+    if (!text.trim()) return;
     addTodo(text);
     setText("");
     setOpen(false);
   }
   return (
     <div>
-      <h3>Add a new Todo</h3>
       <div className="createTodo">
         {open ? (
           <div className="addButton">

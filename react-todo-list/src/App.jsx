@@ -40,18 +40,15 @@ function App() {
     );
   }
 
-  function handleAddTodo() {
-    addTodo(text);
-    setText("");
-    setOpen(false);
-  }
   return (
     <>
       <div className="app">
-        <Header/>
+        <Header />
         <Filter />
-        <List todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
-        <Form addTodo={addTodo}/>
+        <div className="content">
+          <List todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
+        </div>
+        <Form addTodo={addTodo} />
       </div>
     </>
   );
