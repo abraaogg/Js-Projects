@@ -13,7 +13,7 @@ function Header() {
         </button>
 
         {showSearch ? (
-          <input type="text" placeholder="Search here..." />
+          <input type="text" placeholder="Search here..." onChange={(e) => setSearch(e.target.value)} />
         ) : (
           <button onClick={() => setShowSearch(true)}>
             <FaSearch className="icon" />

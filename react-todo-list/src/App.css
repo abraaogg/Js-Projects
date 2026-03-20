@@ -60,7 +60,7 @@ menu {
   outline: none;
 }
 
-.filter{
+.filter {
   width: 160px;
   padding: 6px;
   margin-left: 10px;
@@ -74,7 +74,7 @@ menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 10px;
+  padding: 10px;
   margin: 20px 10px;
   border-radius: 6px;
 }
@@ -85,10 +85,36 @@ menu {
   padding: 10px;
   cursor: pointer;
 }
-.todoItem div {
+
+.todoItem > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.todoItem > div:last-child {
   display: flex;
   align-items: center;
-  gap: 10px; /* cleaner spacing */
+  gap: 10px;
+}
+
+.category {
+  font-size: 0.75em;
+  font-weight: 500;
+  border-radius: 999px; /* 🔥 pill shape */
+  display: inline-block;
+}
+
+.category.Personal {
+  color: #4caf50;
+}
+
+.category.Work {
+  color: #2196f3;
+}
+
+.category.Chores {
+  color: #ff9800;
 }
 
 .checkbox {
@@ -102,7 +128,7 @@ menu {
 .delete {
   color: #c00000;
   font-size: 1.3em;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .delete:hover {
@@ -130,7 +156,7 @@ menu {
   border-radius: 50%;
   cursor: pointer;
   border: none;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .add:hover {
