@@ -6,11 +6,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 
 function App() {
-  const [todos, setTodos] = useState([
-    { id: 1, text: "Study React", completed: false, category: "Personal" },
-    { id: 2, text: "Build Todo App", completed: false, category: "Work" },
-  ]);
-
+  const [todos, setTodos] = useState([]);
   const [search, setSearch] = useState("");
 
   function addTodo(text, category) {

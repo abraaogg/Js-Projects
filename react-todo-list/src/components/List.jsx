@@ -4,6 +4,7 @@ import TodoItem from "./TodoItem";
 function List({ todos, deleteTodo, toggleTodo }) {
   return (
     <div>
+      {todos.length === 0 && <p>No tasks yet 👀</p>}
       {todos.map((todo) => (
         <div key={todo.id}>
           <TodoItem todo={todo} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
