@@ -11,6 +11,8 @@ function App() {
     { id: 2, text: "Build Todo App", completed: false, category: "Work" },
   ]);
 
+  const [search, setSearch] = useState("");
+
   function addTodo(text, category) {
     const newTodo = {
       id: Date.now(),
@@ -41,15 +43,17 @@ function App() {
     );
   }
   const [filter, setFilter] = useState("All");
-  const filteredTodos = todos.filter((todo) => {
-    if (filter === "All") return true;
-    return todo.category === filter;
-  });
+  const filteredTodos = todos
+    .filter((todo) => {
+      if (filter === "All") return true;
+      return todo.category === filter;
+    })
+    .filter((todo) => todo.text.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <>
       <div className="app">
-        <Header />
+        <Header search={search} setSearch={setSearch} />
         <Filter onChangeFilter={setFilter} />
         <div className="content">
           <List

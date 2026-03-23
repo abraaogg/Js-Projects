@@ -3,12 +3,13 @@ import React, { useState } from "react";
 function Form({ addTodo }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("");
 
   function handleAddTodo() {
-    if (!text.trim()) return;
+    if (!text.trim() || !category) return;
     addTodo(text, category);
     setText("");
+    setCategory("");
     setOpen(false);
   }
   return (
@@ -16,7 +17,20 @@ function Form({ addTodo }) {
       <div className="createTodo">
         {open ? (
           <div className="addButton">
-            <input value={text} onChange={(e) => setText(e.target.value)} />
+            <input
+              placeholder="Add a task..."
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="">Select category</option>
+              <option value="Personal">Personal</option>
+              <option value="Work">Work</option>
+              <option value="Chores">Chores</option>
+            </select>
 
             <button onClick={handleAddTodo}>Add</button>
           </div>
@@ -26,7 +40,7 @@ function Form({ addTodo }) {
           </button>
           // We wrap       () => the function so it only runs when clicked
         )}
-        {open && <button onClick={() => setOpen(false)}>Close</button>}
+        {open && <button onClick={() => setOpen(false)}>X</button>}
       </div>
     </div>
   );

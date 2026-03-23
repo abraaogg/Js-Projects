@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { FaSearch } from "react-icons/fa";
 
-function Header() {
+function Header({ search, setSearch }) {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
@@ -13,7 +13,12 @@ function Header() {
         </button>
 
         {showSearch ? (
-          <input type="text" placeholder="Search here..." onChange={(e) => setSearch(e.target.value)} />
+          <input
+            type="text"
+            placeholder="Search here..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         ) : (
           <button onClick={() => setShowSearch(true)}>
             <FaSearch className="icon" />
