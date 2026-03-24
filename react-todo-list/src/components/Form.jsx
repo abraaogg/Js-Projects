@@ -13,35 +13,34 @@ function Form({ addTodo }) {
     setOpen(false);
   }
   return (
-    <div>
-      <div className="createTodo">
-        {open ? (
-          <div className="addButton">
-            <input
-              placeholder="Add a task..."
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value="">Select category</option>
-              <option value="Personal">Personal</option>
-              <option value="Work">Work</option>
-              <option value="Chores">Chores</option>
-            </select>
+    <div className="createTodo">
+      {open && <div className="overlay" onClick={() => setOpen(false)}></div>}
 
-            <button onClick={handleAddTodo}>Add</button>
-          </div>
-        ) : (
-          <button className="add" onClick={() => setOpen(true)}>
-            +
-          </button>
-          // We wrap       () => the function so it only runs when clicked
-        )}
-        {open && <button onClick={() => setOpen(false)}>X</button>}
-      </div>
+      {open ? (
+        <div className="addButton">
+          <input
+            placeholder="Add a task..."
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="">Select category</option>
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Chores">Chores</option>
+          </select>
+
+          <button onClick={handleAddTodo}>Add</button>
+          <button onClick={() => setOpen(false)}>X</button>
+        </div>
+      ) : (
+        <button className="add" onClick={() => setOpen(true)}>
+          +
+        </button>
+      )}
     </div>
   );
 }
