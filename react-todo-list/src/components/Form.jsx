@@ -18,6 +18,7 @@ function Form({ addTodo }) {
 
       {open ? (
         <div className="addButton">
+          <h3>Add a new task</h3>
           <input
             placeholder="Add a task..."
             value={text}
@@ -33,8 +34,12 @@ function Form({ addTodo }) {
             <option value="Chores">Chores</option>
           </select>
 
-          <button onClick={handleAddTodo}>Add</button>
-          <button onClick={() => setOpen(false)}>X</button>
+          <button className="saveButton" onClick={handleAddTodo}>
+            Save
+          </button>
+          <button className="closeButton" onClick={() => setOpen(false)}>
+            X
+          </button>
         </div>
       ) : (
         <button className="add" onClick={() => setOpen(true)}>
