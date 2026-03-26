@@ -26,13 +26,8 @@ function Header({ search, setSearch }) {
         )}
       </menu>
 
-      <h1>
-        Today:{" "}
-        {new Date().toLocaleDateString("en-GB", {
-          day: "numeric",
-          month: "long",
-        })}
-      </h1>
+      <h2 className="title">My Tasks</h2>
+      <p className="subtitle">Stay organized, stay sharp</p>
     </div>
   );
 }

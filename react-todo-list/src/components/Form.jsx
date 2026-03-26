@@ -4,9 +4,13 @@ function Form({ addTodo }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
+  const [error, setError] = useState("");
 
   function handleAddTodo() {
-    if (!text.trim() || !category) return;
+    if (!text.trim() || !category) {
+      setError("Please enter a task and select a category");
+      return;
+    }
     addTodo(text, category);
     setText("");
     setCategory("");
@@ -20,11 +24,13 @@ function Form({ addTodo }) {
         <div className="addButton">
           <h3>Add a new task</h3>
           <input
+            className={!text && error ? "errorInput" : ""}
             placeholder="Add a task..."
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
           <select
+            className={!category && error ? "errorInput" : ""}
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -33,6 +39,8 @@ function Form({ addTodo }) {
             <option value="Work">Work</option>
             <option value="Chores">Chores</option>
           </select>
+
+          {error && <p className="error">{error}</p>}
 
           <button className="saveButton" onClick={handleAddTodo}>
             Save
