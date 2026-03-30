@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/modal.css";
 
 function Modal() {
   const [open, setOpen] = useState(false);

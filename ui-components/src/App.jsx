@@ -1,12 +1,13 @@
-import { useState } from "react";
 import "./App.css";
-import Modal from "./components/Modal";
+import Dropdown from "./components/Dropdown";
+import Modal from "./components/MOdal";
 
 function App() {
   return (
     <>
       <h1>UI playground</h1>
-      <Modal />
+     {/*  <Modal /> */}
+     <Dropdown/>
     </>
   );
 }
