@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../css/dropdown.css";
 
-function Dropdown() {
+function Dropdown({options}) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("Select");
   const dropdownRef = useRef(null);
@@ -22,22 +22,17 @@ function Dropdown() {
       <button onClick={() => setOpen(!open)}>{selected}</button>
       {open && (
         <div>
-          <p
-            onClick={() => {
-              setSelected("Option1");
-              setOpen(false);
-            }}
-          >
-            option 1
-          </p>
-          <p
-            onClick={() => {
-              setSelected("Option2");
-              setOpen(false);
-            }}
-          >
-            option 2
-          </p>
+          {options.map((option) => (
+            <p
+              onClick={() => {
+                setSelected(option);
+                setOpen(false);
+              }}
+              key={option}
+            >
+              {option}
+            </p>
+          ))}
         </div>
       )}
     </div>
