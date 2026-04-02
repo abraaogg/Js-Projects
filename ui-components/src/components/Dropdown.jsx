@@ -23,11 +23,15 @@ function Dropdown({ options }) {
     return option.toLowerCase().includes(search.toLowerCase());
   });
   return (
-    <div ref={dropdownRef}>
-      <button onClick={() => setOpen(!open)}>{selected}</button>
+    <div className="dropdown" ref={dropdownRef}>
+      <button className="dropdownBtn" onClick={() => setOpen(!open)}>
+        {selected}
+      </button>
       {open && (
-        <div>
+        <div className="dropdownPanel">
           <input
+          className="dropdownInput"
+          placeholder="Search"
             value={search}
             type="text"
             onChange={(e) => setSearch(e.target.value)}
@@ -36,6 +40,7 @@ function Dropdown({ options }) {
             ? "No results found"
             : filteredOptions.map((option) => (
                 <p
+                  className="dropdownOption"
                   onClick={() => {
                     setSelected(option);
                     setOpen(false);
