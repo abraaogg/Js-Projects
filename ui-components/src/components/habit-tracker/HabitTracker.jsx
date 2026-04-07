@@ -13,7 +13,7 @@ function HabitTracker() {
 
     setHabits((prev) => [
       ...prev,
-      { id, name: newHabit, done: false, visible: false },
+      { id, name: newHabit.trim(), done: false, visible: false },
     ]);
 
     setInput("");
@@ -59,22 +59,24 @@ function HabitTracker() {
         <button onClick={() => addHabits(input)}>Add</button>
       </div>
       {habits.map((habit) => (
-        <p
-          className={`habit ${habit.done ? "done" : ""} ${habit.visible ? "show" : "hidden"}`}
-          key={habit.id}
-          onClick={() => toggleHabit(habit.id)}
-        >
-          {habit.name}
-          <button
-            className="deleteButton"
-            onClick={(e) => {
-              e.stopPropagation();
-              deleteHabit(habit.id);
-            }}
+        <div>
+          <p
+            className={`habit ${habit.done ? "done" : ""} ${habit.visible ? "show" : "hidden"}`}
+            key={habit.id}
+            onClick={() => toggleHabit(habit.id)}
           >
-            <FaTrash />
-          </button>
-        </p>
+            {habit.name}
+            <button
+              className="deleteButton"
+              onClick={(e) => {
+                e.stopPropagation();
+                deleteHabit(habit.id);
+              }}
+            >
+              <FaTrash />
+            </button>
+          </p>
+        </div>
       ))}
     </div>
   );
