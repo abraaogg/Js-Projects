@@ -6,7 +6,7 @@ import HabitTracker from "./components/habit-tracker/HabitTracker";
 function App() {
   return (
     <>
-      <h1>UI playground</h1>
+      <h1 className="pageTitle">UI playground</h1>
       {/*  <Modal /> 
           <Dropdown options ={["Option 1", "Option 2"]}/>
      */}
