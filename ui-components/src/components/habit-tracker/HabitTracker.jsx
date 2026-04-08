@@ -40,7 +40,17 @@ function HabitTracker() {
   }
 
   function deleteHabit(id) {
-    setHabits((prev) => prev.filter((habit) => habit.id !== id));
+    // Step 1: trigger fade out
+    setHabits((prev) =>
+      prev.map((habit) =>
+        habit.id === id ? { ...habit, visible: false } : habit,
+      ),
+    );
+
+    // Step 2: remove after animation
+    setTimeout(() => {
+      setHabits((prev) => prev.filter((habit) => habit.id !== id));
+    }, 300); // match CSS duration
   }
   return (
     <div className="container">
@@ -61,8 +71,9 @@ function HabitTracker() {
       {habits.map((habit) => (
         <div>
           <p
-            className={`habit ${habit.done ? "done" : ""} ${habit.visible ? "show" : "hidden"}`}
-            key={habit.id}
+            className={`habit ${habit.done ? "done" : ""} ${
+              habit.visible ? "" : "hidden"
+            }`}
             onClick={() => toggleHabit(habit.id)}
           >
             {habit.name}
