@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../css/habitTracker.css";
-import { FaTrash } from "react-icons/fa";
+import HabitItem from "./HabitItem";
 
 function HabitTracker() {
   const [habits, setHabits] = useState([]);
@@ -69,25 +69,12 @@ function HabitTracker() {
         <button onClick={() => addHabits(input)}>Add</button>
       </div>
       {habits.map((habit) => (
-        <div>
-          <p
-            className={`habit ${habit.done ? "done" : ""} ${
-              habit.visible ? "" : "hidden"
-            }`}
-            onClick={() => toggleHabit(habit.id)}
-          >
-            {habit.name}
-            <button
-              className="deleteButton"
-              onClick={(e) => {
-                e.stopPropagation();
-                deleteHabit(habit.id);
-              }}
-            >
-              <FaTrash />
-            </button>
-          </p>
-        </div>
+        <HabitItem
+          key={habit.id}
+          habit={habit}
+          toggleHabit={toggleHabit}
+          deleteHabit={deleteHabit}
+        />
       ))}
     </div>
   );
