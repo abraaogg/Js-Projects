@@ -29,13 +29,9 @@ function HabitTracker() {
 
   function toggleHabit(id) {
     setHabits((prev) =>
-      prev.map((habit) => {
-        if (habit.id === id) {
-          return { ...habit, done: !habit.done };
-        } else {
-          return habit;
-        }
-      }),
+      prev.map((habit) =>
+        habit.id === id ? { ...habit, done: !habit.done } : habit,
+      ),
     );
   }
 
@@ -58,6 +54,7 @@ function HabitTracker() {
         <input
           type="text"
           maxLength={30}
+          placeholder="Add a habit..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
