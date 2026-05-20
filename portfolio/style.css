@@ -27,6 +27,8 @@ body {
   color: var(--text-color);
 }
 
+/* Header */
+
 .header {
   position: fixed;
   width: 100%;
@@ -75,4 +77,56 @@ span {
 .navbar a:hover {
   border-bottom: 3px solid var(--main-color);
   color: var(--main-color);
+}
+
+/* Section */
+
+section {
+  min-height: 100vh;
+  padding: 10rem 12%;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.home-content h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+.home-content h3 {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.home-content p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.home-img img {
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 24px var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+.home-img img:hover {
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
 }
