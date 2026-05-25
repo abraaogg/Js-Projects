@@ -22,9 +22,15 @@ html {
   --main-color: #0077ff;
 }
 
+/* #0077ff */
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
+}
+
+img {
+  user-select: none;
 }
 
 /* Header */
@@ -327,6 +333,45 @@ section {
 }
 
 .project-card img {
-  height: 200px;
-  width: 200px;
+  max-width: 300px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+}
+
+.project-card p {
+  font-size: 1.4rem;
+}
+
+.contact {
+  background-color: var(--bg-color);
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 2.4rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.4rem 0;
+  resize: none;
 }
