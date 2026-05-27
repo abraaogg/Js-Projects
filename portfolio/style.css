@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
   text-decoration: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -95,7 +95,7 @@ section {
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  gap: 15rem;
+  gap: 14rem;
 }
 
 .home-content {
@@ -175,6 +175,7 @@ section {
   border: 2px solid transparent;
   font-weight: 600;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -204,6 +205,10 @@ section {
   align-items: center;
   gap: 10rem;
   background-color: var(--second-bg-color);
+}
+
+.about-content {
+  max-width: 600px;
 }
 
 .about-content h2 {
@@ -257,7 +262,7 @@ section {
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
-  height: 450px;
+  min-height: 450px;
   border-radius: 2rem;
   cursor: pointer;
   border: 4px solid transparent;
@@ -307,6 +312,7 @@ section {
 }
 
 .project-card {
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,6 +338,7 @@ section {
 
 .project-card img {
   max-width: 300px;
+  height: 180px;
   border-radius: 2em;
   object-fit: cover;
 }
@@ -424,44 +431,44 @@ section {
     border-bottom: 2px solid var(--main-color);
     display: none;
   }
-  .navbar a{
+  .navbar a {
     display: block;
     font-size: 2rem;
     margin: 2rem 0;
     color: var(--text-color);
   }
 
-  .navbar.active{
+  .navbar.active {
     display: block;
   }
 
-  .gradient-btn{
+  .gradient-btn {
     display: none;
   }
-  .home{
+  .home {
     flex-direction: column-reverse;
     margin: 4rem 0;
     gap: 4rem;
   }
-  .home-content{
+  .home-content {
     align-items: center;
     text-align: center;
   }
-  .home-img img{
+  .home-img img {
     width: 56vw;
   }
-  .about{
+  .about {
     flex-direction: column-reverse;
     text-align: center;
   }
-  .about h2{
+  .about h2 {
     text-align: center;
     margin: 2rem 0;
   }
-  .about img{
+  .about img {
     width: 52vw;
   }
-  .content form{
+  .contact form {
     flex-direction: column;
   }
 }
