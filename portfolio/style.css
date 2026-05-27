@@ -468,6 +468,10 @@ section {
   .about img {
     width: 52vw;
   }
+  .projects-box,
+  .services-container {
+    grid-template-columns: 1fr;
+  }
   .contact form {
     flex-direction: column;
   }
