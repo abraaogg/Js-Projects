@@ -253,6 +253,7 @@ section {
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 }
@@ -312,7 +313,6 @@ section {
 }
 
 .project-card {
-  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -322,7 +322,7 @@ section {
   border: 2px solid var(--main-color);
   border-radius: 2rem;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 0 4px var(--main-color);
@@ -349,6 +349,7 @@ section {
 
 .project-card p {
   font-size: 1.4rem;
+  flex-grow: 1;
 }
 
 .contact {
@@ -379,6 +380,12 @@ section {
   border: 2px solid var(--main-color);
   margin: 1.4rem 0;
   resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .footer {
