@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 function Header() {
   return (
-    <div>
+    <header className="header">
       <a href="" className="logo">
         Abraão <span>Grigório</span>
       </a>
-    </div>
+    </header>
   );
 }
 
