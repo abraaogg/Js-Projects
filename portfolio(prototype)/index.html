@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="" class="logo"> Abraão <span>Grigório</span></a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, It's <span>Abraão</span></h1>
+        <h3>I'm a <span>Developer</span></h3>
+        <p>
+          Transforming ideas into modern, responsive, and interactive web
+          experiences.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://github.com/abraaogg" target="_blank">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abra%C3%A3o-grig%C3%B3rio/"
+            target="_blank"
+          >
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+        </div>
+        <div class="btn-group">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=abraaogrigoriog@gmail.com"
+            class="btn"
+            target="_blank"
+          >
+            Hire Me
+          </a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="imgs/img1.jpg" alt="Abraão portfolio image" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="imgs/img1.jpg" alt="Abraão portfolio image" />
+      </div>
+      <div class="about-content">
+        <h2>About <span>Me</span></h2>
+        <p>
+          Driven by creativity and curiosity, I enjoy building web experiences
+          that are both visually appealing and functional.
+        </p>
+        <a href="about.html" class="btn">Read More</a>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2 class="heading">Projects</h2>
+
+      <div class="projects-box">
+        <div class="project-card">
+          <img src="imgs/notes.webp" alt="" />
+          <h3>Notes App</h3>
+          <p>
+            A React notes app that allows users to create, edit, and organize
+            notes through a simple and intuitive interface.
+          </p>
+          <div class="btn">View Project</div>
+        </div>
+
+        <div class="project-card">
+          <img src="imgs/todo.webp" alt="" />
+          <h3>To-do List</h3>
+          <p>
+            A React task management app that helps users organize, complete, and
+            manage daily tasks efficiently.
+          </p>
+          <div class="btn">View Project</div>
+        </div>
+        <div class="project-card">
+          <img src="imgs/weather.webp" alt="" />
+          <h3>Weather App</h3>
+          <p>
+            A weather application that displays real-time temperature and
+            weather conditions with a clean and modern interface.
+          </p>
+          <div class="btn">View Project</div>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <h2 class="heading">Services</h2>
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-info">
+            <i class="bx bxs-devices"></i>
+            <h4>Web Development</h4>
+            <p>
+              Building responsive and user-friendly mobile applications with a
+              focus on performance and modern design.
+            </p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="service-info">
+            <i class="bx bx-code"></i>
+            <h4>Frontend Development</h4>
+            <p>
+              Creating modern, responsive, and interactive websites with clean
+              code and smooth user experiences.
+            </p>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="service-info">
+            <i class="bx bxl-figma"></i>
+            <h4>UI / UX Design</h4>
+            <p>
+              Designing intuitive and visually appealing interfaces focused on
+              usability, accessibility, and user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form action="">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" name="email" id="email" />
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Phone Number" />
+            <input type="text" placeholder="Subject" />
+          </div>
+        </div>
+
+        <div class="input-group-2">
+          <textarea
+            name="text"
+            id="text"
+            placeholder="Your Message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://github.com/abraaogg" target="_blank">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/abra%C3%A3o-grig%C3%B3rio/"
+          target="_blank"
+        >
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+      </div>
+      <ul class="list">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">© Abraão Grigório. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
