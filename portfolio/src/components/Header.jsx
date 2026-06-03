@@ -1,11 +1,47 @@
 import React, { useState } from "react";
 
 function Header() {
+  const navItems = [
+    {
+      name: "Home",
+      id: "home",
+    },
+    {
+      name: "About",
+      id: "about",
+    },
+    {
+      name: "Projects",
+      id: "projects",
+    },
+    {
+      name: "Services",
+      id: "services",
+    },
+    {
+      name: "Contact",
+      id: "contact",
+    },
+  ];
+
   return (
     <header className="header">
-      <a href="" className="logo">
+      <a href="#home" className="logo">
         Abraão <span>Grigório</span>
       </a>
+
+      <nav className="navbar">
+        {navItems.map((item) => {
+          return (
+            // for each Item inside navItems, return one <a>
+            // key → helps React track list items.
+            // href → tells the browser where to scroll.
+            <a key={item.id} href={`#${item.id}`}>
+              {item.name}
+            </a>
+          );
+        })}
+      </nav>
     </header>
   );
 }
