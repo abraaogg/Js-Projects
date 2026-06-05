@@ -1,27 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Header() {
   const navItems = [
-    {
-      name: "Home",
-      id: "home",
-    },
-    {
-      name: "About",
-      id: "about",
-    },
-    {
-      name: "Projects",
-      id: "projects",
-    },
-    {
-      name: "Services",
-      id: "services",
-    },
-    {
-      name: "Contact",
-      id: "contact",
-    },
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Projects", id: "projects" },
+    { name: "Services", id: "services" },
+    { name: "Contact", id: "contact" },
   ];
 
   return (
