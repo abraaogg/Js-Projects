@@ -26,3 +26,11 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
+.navbar {
+  /* hidden mobile menu */
+}
+
+.navbar.open {
+  /* visible mobile menu */
+}
