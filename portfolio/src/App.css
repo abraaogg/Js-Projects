@@ -28,9 +28,19 @@ body {
 }
 
 .navbar {
-  /* hidden mobile menu */
+  /* default styles */
+  display: none;
 }
 
 .navbar.open {
-  /* visible mobile menu */
+  /* styles when menu is open */
+  display: block;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
 }

@@ -21,20 +21,18 @@ function Header() {
         Abraão <span>Grigório</span>
       </a>
 
-      {menuOpen && (
-        <nav className="navbar">
-          {navItems.map((item) => {
-            return (
-              // for each Item inside navItems, return one <a>
-              // key → helps React track list items.
-              // href → tells the browser where to scroll.
-              <a key={item.id} href={`#${item.id}`}>
-                {item.name}
-              </a>
-            );
-          })}
-        </nav>
-      )}
+      <nav className={menuOpen ? "navbar open" : "navbar"}>
+        {navItems.map((item) => {
+          return (
+            // for each Item inside navItems, return one <a>
+            // key → helps React track list items.
+            // href → tells the browser where to scroll.
+            <a key={item.id} href={`#${item.id}`}>
+              {item.name}
+            </a>
+          );
+        })}
+      </nav>
     </header>
   );
 }
