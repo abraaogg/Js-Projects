@@ -27,6 +27,15 @@ body {
   color: var(--text-color);
 }
 
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: aliceblue;
+  background-color: aquamarine;
+}
+
 .navbar {
   /* default styles */
   display: none;
@@ -34,13 +43,18 @@ body {
 
 .navbar.open {
   /* styles when menu is open */
-  display: block;
+  display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 @media (min-width: 1200px) {
   .navbar {
     display: flex;
     flex-direction: row;
+  }
+
+  .menuIcon{
+    display: none;
   }
 }

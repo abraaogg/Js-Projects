@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Header() {
   const navItems = [
@@ -14,12 +14,12 @@ function Header() {
 
   return (
     <header className="header">
-      <button onClick={() => setMenuOpen(!menuOpen)}>
-        <FaBars />
-      </button>
       <a href="#home" className="logo">
         Abraão <span>Grigório</span>
       </a>
+      <button className="menuIcon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
 
       <nav className={menuOpen ? "navbar open" : "navbar"}>
         {navItems.map((item) => {
@@ -27,7 +27,7 @@ function Header() {
             // for each Item inside navItems, return one <a>
             // key → helps React track list items.
             // href → tells the browser where to scroll.
-            <a key={item.id} href={`#${item.id}`}>
+            <a key={item.id} href={`#${item.id}`} onClick={() => setMenuOpen(false)}>
               {item.name}
             </a>
           );
