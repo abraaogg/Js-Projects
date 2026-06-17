@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
   text-decoration: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -19,7 +19,7 @@ html {
   --bg-color: #080808;
   --second-bg-color: #000a10;
   --text-color: white;
-  --main-color: #0077ff;
+  --main-color: #0ed6cd;
 }
 
 body {
@@ -30,21 +30,28 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  height: 50px;
   top: 0;
   left: 0;
   padding: 4rem 12%;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  background: transparent;
+  backdrop-filter: blur(0);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--text-color);
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -53,21 +60,38 @@ body {
   color: var(--text-color);
 }
 
+.menuIcon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+.menuIcon:hover {
+  transform: scale(1.1);
+}
+
+.menuIcon:active {
+  transform: scale(0.9);
+}
+
 .navbar {
   /* default styles */
   display: none;
   position: fixed;
   top: 100%;
   right: 0;
- 
 }
 .navbar a {
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--text-color);
   font-weight: 400;
   border-bottom: 3px solid transparent;
-  gap: 30px;
+  margin-left: 1rem;
   transition: 0.3s ease;
 }
 
@@ -125,10 +149,10 @@ body {
 }
 
 .home {
-  min-height: 500px;
-  background-color: #19413c;
-  background-size: contain;
-  background-position: right;
+  min-height: 100vh;
+  background: url(imgs/home-background.png);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .projects {
@@ -138,4 +162,3 @@ body {
   background-position: top;
   background-repeat: no-repeat;
 }
-
