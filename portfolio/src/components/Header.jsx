@@ -29,11 +29,15 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (window.scrollY > 100) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
