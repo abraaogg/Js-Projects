@@ -1,0 +1,80 @@
+.home {
+  min-height: 100vh;
+  background: url("../imgs/home-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.home-content {
+  max-width: 50%;
+  padding: 0 4%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.home h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 28rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem 1rem;
+
+  text-decoration: none;
+  color: var(--text-color);
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+
+  transition: all 0.3s ease;
+}
+
+.button-group a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.button-group a:active {
+  transform: translateY(0);
+}
+
+.button-group a svg {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+  .home-content {
+    max-width: 40vw;
+  }
+  .button-group a svg {
+    font-size: 2rem;
+  }
+}

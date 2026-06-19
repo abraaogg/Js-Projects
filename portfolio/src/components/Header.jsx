@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "../styles/header.css";
 
 function Header() {
   const navItems = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Projects", id: "projects" },
-    { name: "Services", id: "services" },
-    { name: "Contact", id: "contact" },
+    { name: "HOME", id: "home" },
+    { name: "PROJECTS", id: "projects" },
+    { name: "ABOUT", id: "about" },
+    { name: "CONTACT", id: "contact" },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
