@@ -17,7 +17,7 @@ html {
 
 :root {
   --bg-color: #080808;
-  --second-bg-color: #000a10;
+  --subtitle-color: #000a10;
   --text-color: white;
   --main-color: #0ed6cd;
 }
@@ -30,7 +30,7 @@ body {
 
 ::selection {
   color: #14191C; /* Changes highlighted text color */
-  background-color: #dedede; /* Changes highlight background color */
+  background-color: #617070; /* Changes highlight background color */
 }
 
 

@@ -1,0 +1,9 @@
+.projects {
+  padding: 2% 4%;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  color: var(--subtitle-color);
+  margin-bottom: 2rem;
+}
