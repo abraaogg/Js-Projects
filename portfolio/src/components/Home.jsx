@@ -12,10 +12,10 @@ function Home() {
           experiences.
         </p>
         <div className="button-group">
-          <a href="https://www.linkedin.com/in/abra%C3%A3o-grig%C3%B3rio/" target="_blank">
+          <a href="https://github.com/abraaogg" target="_blank">
             <FaGithub />
           </a>
-          <a href="cover-letter-icon">
+          <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer">
             <FaFileAlt />
           </a>
         </div>
