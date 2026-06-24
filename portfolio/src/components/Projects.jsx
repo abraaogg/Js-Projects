@@ -1,29 +1,29 @@
 import "../styles/projects.css";
-import notesImg from "../imgs/notes.webp";
-import todoImg from "../imgs/todo.webp";
-import weatherImg from "../imgs/weather.webp";
+import notesImg from "../imgs/notes-img.jpeg";
+import todoImg from "../imgs/todo-img.jpeg";
+import weatherImg from "../imgs/weather-img.jpeg";
 
 function Projects() {
   const projects = [
     {
       id: 1,
       image: notesImg,
-      title: "Portfolio",
-      description: "Personal portfolio built with React.",
+      title: "Notes",
+      description: "Create and manage notes.",
       github: "https://github.com/...",
     },
     {
       id: 2,
       image: todoImg,
-      title: "Portfolio",
-      description: "Personal portfolio built with React.",
+      title: "To-Do List",
+      description: "Organize tasks with ease.",
       github: "https://github.com/...",
     },
     {
       id: 3,
       image: weatherImg,
       title: "Portfolio",
-      description: "Personal portfolio built with React.",
+      description: "Live weather forecasts.",
       github: "https://github.com/...",
     },
   ];
