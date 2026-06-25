@@ -22,7 +22,7 @@ function Projects() {
     {
       id: 3,
       image: weatherImg,
-      title: "Portfolio",
+      title: "Weather",
       description: "Live weather forecasts.",
       github: "https://github.com/...",
     },
@@ -34,10 +34,13 @@ function Projects() {
         {projects.map((project) => (
           <div className="card" key={project.id}>
             <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <div className="project-description">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+
             <a href={project.github} target="_blank">
-              GitHub
+              VIEW PROJECT
             </a>
           </div>
         ))}
