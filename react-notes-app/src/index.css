@@ -1,3 +1,8 @@
+* {
+  outline: none;
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
@@ -22,7 +27,7 @@ code {
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1f2937, #14191c);
+  background: #dedede;
   padding: 3rem 1rem;
   transition: background-color 0.25s ease;
 }
@@ -40,12 +45,19 @@ code {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  background-color: #dedede;
-  border-radius: 20px;
   padding: 2rem;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
   box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.25),
-    0 10px 20px rgba(0, 0, 0, 0.15);
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
 /* HEADER */
@@ -54,6 +66,19 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.toggle {
+  background-color: #00605f;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 12px;
+  transition: all 0.3s ease;
+}
+
+.toggle:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
 }
 
 /* NOTES GRID */
@@ -90,6 +115,7 @@ code {
 textarea {
   border: none;
   resize: none;
+  font-size: 1rem;
   background-color: #00605f;
   border-radius: 8px;
   color: white;
@@ -122,7 +148,7 @@ textarea::placeholder {
 }
 
 .save:hover {
-  background-color: #ededed;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
@@ -150,6 +176,7 @@ textarea::placeholder {
   background-color: transparent;
   width: 100%;
   margin-left: 8px;
+  font-size: 1rem;
 }
 
 .search input:focus {

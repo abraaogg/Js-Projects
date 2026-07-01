@@ -1,6 +1,7 @@
 import React from "react";
+import { FiSun, FiMoon } from "react-icons/fi";
 
-function Header({ handleToggleDarkMode }) {
+function Header({ handleToggleDarkMode, darkMode }) {
   return (
     <div className="header">
       <h1>Notes</h1>
@@ -8,9 +9,9 @@ function Header({ handleToggleDarkMode }) {
         onClick={() =>
           handleToggleDarkMode((previousDarkMode) => !previousDarkMode)
         }
-        className="save"
+        className="toggle"
       >
-        Toggle Mode
+        {darkMode ? <FiSun size={24} /> : <FiMoon size={24} />}
       </button>
     </div>
   );
