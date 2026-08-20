@@ -1,0 +1,138 @@
+.included {
+  padding: 80px 0;
+}
+
+.included-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.included-label {
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+.included-content h2 {
+  max-width: 430px;
+  margin-top: 15px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.included-content ul {
+  margin-top: 35px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  list-style: none;
+}
+
+.included-content li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: var(--text-light);
+
+  font-size: 14px;
+}
+
+.included-content li span {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 50%;
+
+  color: var(--primary);
+
+  font-size: 11px;
+}
+
+.included-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.book-pages-placeholder {
+  width: 420px;
+  height: 280px;
+
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid var(--border);
+
+  background: #efeee7;
+
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.08);
+
+  transform: rotate(-2deg);
+
+  color: var(--primary);
+}
+
+.book-pages-placeholder span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.book-pages-placeholder strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+}
+
+.book-pages-placeholder small {
+  color: var(--text-light);
+}
+
+@media (max-width: 800px) {
+  .included-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .included-content {
+    text-align: center;
+  }
+
+  .included-content h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .included-content ul {
+    align-items: flex-start;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-pages-placeholder {
+    width: 90%;
+  }
+}
