@@ -1,15 +1,15 @@
-
+import "../styles/header.css";
 
 function Header() {
   return (
     <header className="header" id="header">
       <div className="logo">
-        MyLogo
+        Logo
       </div>
 
       <nav className="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#home">Watches</a>
+        <a href="#about">Story</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
