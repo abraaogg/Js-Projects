@@ -6,6 +6,11 @@ function Hero() {
       <p className="hero-description">
         A silent dialogue between gravity and precision.
       </p>
+
+       <a href="#collection" className="scroll-down" aria-label="Scroll down">
+        <span className="scroll-line"></span>
+        <span className="scroll-chevron"></span>
+      </a>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function Header() {
       </div>
 
       <nav className="nav">
-        <a href="#purchase">Purchase</a>
+        <a href="#purchase">STORY</a>
       </nav>
     </header>
   );

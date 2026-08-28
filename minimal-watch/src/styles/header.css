@@ -6,14 +6,13 @@
 }
 
 .nav a {
-  color: var(--color-accent);
-  border: 2px solid var(--color-accent);
-  padding: 4px;
-  border-radius: 6px;
-  display: inline-block;
+  color: var(--color-text);
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 2px;
   transition: transform 0.3s ease;
 }
 
 .nav a:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
