@@ -5,14 +5,25 @@
   font-size: 1.2rem;
 }
 
-.nav a {
-  color: var(--color-text);
-  font-weight: 300;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  transition: transform 0.3s ease;
+nav {
+  display: none;
 }
 
-.nav a:hover {
-  transform: translateY(-2px);
+@media (min-width: 1200px) {
+  nav {
+    display: block;
+  }
+  .nav a {
+    display: inline-block;
+    color: var(--color-text);
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding-left: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .nav a:hover {
+    transform: translateY(-2px);
+  }
 }

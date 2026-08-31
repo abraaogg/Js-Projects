@@ -1,0 +1,18 @@
+.watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.watch-image {
+  width: 70vw;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (min-width: 1200px) {
+  .watch-image {
+    width: 30vw;
+    max-width: 500px;
+  }
+}
