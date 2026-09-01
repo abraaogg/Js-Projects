@@ -3,6 +3,9 @@ import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Watch from "./components/Watch";
+import About from "./components/About";
+import CTA from "./components/Cta";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <Header />
       <Hero/>
       <Watch/>
+      <About/>
+      <CTA/>
+      <Footer/>
     </>
   );
 }
