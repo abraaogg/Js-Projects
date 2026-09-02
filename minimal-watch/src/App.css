@@ -2,3 +2,39 @@ main {
   min-height: 100vh;
   width: 100%;
 }
+
+.about-watch {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile: Watch first, About second */
+.watch {
+  order: 1;
+}
+
+.about {
+  order: 2;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .about-watch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    margin-top: 100px;
+  }
+
+  .watch {
+    grid-column: 2;
+    grid-row: 1;
+    order: 2;
+  }
+
+  .about {
+    grid-column: 1;
+    grid-row: 1;
+    order: 1;
+  }
+}

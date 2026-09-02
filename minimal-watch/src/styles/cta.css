@@ -1,63 +1,65 @@
 .cta {
   min-height: 70vh;
   padding: 80px 24px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
 }
+
 .cta h2 {
   margin: 0 0 60px;
-
   color: #151515;
   font-family: "Cormorant Garamond", serif;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.05;
-
 }
 
 .cta-button {
   position: relative;
-
   width: 250px;
   height: 50px;
 
-  border: 2px solid #dda047;
+  border: none;
   background: #dda047;
-
   color: #111;
+
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 3px;
-
   cursor: pointer;
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button::before {
   content: "";
-
   position: absolute;
   inset: -6px;
 
-  border: 2px solid #dda047;
-
+  border: 3px solid #dda047;
   pointer-events: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(221, 160, 71, 0.25);
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
 }
 
 .cta-note {
   margin: 18px 0 0;
-
   color: #aaa8a1;
   font-size: 0.55rem;
   font-weight: 400;
   letter-spacing: 2.5px;
 }
 
-/* Desktop */
 @media (min-width: 768px) {
   .cta {
     min-height: 70vh;
@@ -72,12 +74,10 @@
   .cta-button {
     width: 240px;
     height: 64px;
-    font-size: 1rem;
     letter-spacing: 4px;
   }
 
   .cta-note {
-    margin-top: 20px;
     font-size: 0.65rem;
     letter-spacing: 4px;
   }

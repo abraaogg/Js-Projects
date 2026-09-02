@@ -11,37 +11,34 @@ function Watch() {
   const watchRef = useRef(null);
 
   useEffect(() => {
-    let rotation = 0;
+  let rotation = 0;
 
-    ScrollTrigger.create({
-      trigger: watchRef.current,
-      start: "top bottom",
-      end: "bottom top",
+  const trigger = ScrollTrigger.create({
+    trigger: watchRef.current,
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 2,
 
-      onUpdate: (self) => {
-        // Scroll down
-        if (self.direction === 1) {
-          rotation += 3;
-        }
+    onUpdate: (self) => {
+      if (self.direction === 1) {
+        rotation += 3;
+      }
 
-        // Scroll up
-        if (self.direction === -1) {
-          rotation -= 3;
-        }
+      if (self.direction === -1) {
+        rotation -= 3;
+      }
 
-        gsap.to(watchRef.current, {
-          rotation: rotation,
-          duration: 0.2,
-          ease: "power2.out",
-          overwrite: true,
-        });
-      },
-    });
+      gsap.to(watchRef.current, {
+        rotation,
+        duration: 0.2,
+        ease: "power2.out",
+        overwrite: true,
+      });
+    },
+  });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  return () => trigger.kill();
+}, []);
 
   return (
     <section className="watch">

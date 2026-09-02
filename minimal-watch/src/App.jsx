@@ -11,8 +11,10 @@ function App() {
     <>
       <Header />
       <Hero/>
-      <Watch/>
-      <About/>
+      <div className="about-watch">
+        <Watch/>
+        <About/>
+      </div>
       <CTA/>
       <Footer/>
     </>

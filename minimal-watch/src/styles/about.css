@@ -41,9 +41,9 @@
 }
 
 /* Desktop */
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .about {
-    padding: 120px 54px;
+    padding: 0 60px;
   }
 
   .about-section h3 {
