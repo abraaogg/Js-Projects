@@ -1,14 +1,87 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+
+  width: calc(100% - 4rem);
+  margin: 1rem auto;
+  padding: 0.65rem 0.75rem 0.65rem 1rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
 }
 
 .header a {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.paw-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .nav {
-  display: flex;
-  gap: 1rem;
+  display: none;
+}
+
+.header .header-cta {
+  padding: 1rem 1.4rem;
+
+  border-radius: 999px;
+  background: var(--text-color);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.header .header-cta:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  background-color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: min(1100px, 80%);
+    margin: 1.4rem auto;
+    padding: 1.4rem;
+  }
+
+  .paw-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav a:hover {
+    opacity: 0.6;
+  }
 }

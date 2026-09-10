@@ -1,3 +1,73 @@
-body{
-  background-color: #F2F2F2;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  background-color: oklch(0.96 0.01 240);
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.background-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  background: linear-gradient(
+    to bottom,
+    oklch(0.76 0.12 230 / 0.3),
+    oklch(0.96 0.01 240),
+    oklch(0.78 0.14 80 / 0.25)
+  );
+}
+
+.sky-blob {
+  position: absolute;
+  top: -6rem;
+  left: 25%;
+  width: 420px;
+  height: 420px;
+  border-radius: 9999px;
+  background: oklch(0.76 0.12 230 / 0.3);
+  filter: blur(64px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.coral-blob {
+  position: absolute;
+  top: 33%;
+  right: 0;
+  width: 380px;
+  height: 380px;
+  border-radius: 9999px;
+  background: oklch(0.66 0.15 30 / 0.2);
+  filter: blur(64px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.sun-blob {
+  position: absolute;
+  bottom: -6rem;
+  left: 2.5rem;
+  width: 360px;
+  height: 360px;
+  border-radius: 9999px;
+  background: oklch(0.78 0.14 80 / 0.25);
+  filter: blur(64px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+:root {
+  --text-color: #030917;
+  --accent-color: #15959b;
+  --red: #df6a59;
+  --yellow: #e6ac3d;
 }

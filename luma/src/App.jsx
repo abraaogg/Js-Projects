@@ -5,8 +5,13 @@ import Home from "./components/Home";
 function App() {
   return (
     <>
-      <Header />
-      <Home />
+      <div class="background-layer">
+        <div class="sky-blob"></div>
+        <div class="coral-blob"></div>
+        <div class="sun-blob"></div>
+        <Header />
+        <Home />
+      </div>
     </>
   );
 }
