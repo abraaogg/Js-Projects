@@ -1,11 +1,10 @@
 import "../styles/header.css";
-import { FiArrowRight } from "react-icons/fi";
 function Header() {
   return (
     <div className="header">
-      <h1>Carlos Foa</h1>
+      <a className="logo" href="">Carlos Foa</a>
       <a className="cta" href="">
-        Comprar e-book <FiArrowRight />
+        Comprar ebook <span className="arrow">➞</span>
       </a>
     </div>
   );

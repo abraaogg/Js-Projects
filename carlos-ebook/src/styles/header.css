@@ -1,6 +1,15 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 2rem 0;
 }
 
+.header .logo {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-family: "Fraunces", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+}

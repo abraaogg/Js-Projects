@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 
+
+
 body {
   font-family: "DM Sans", sans-serif;
+  padding: 0 1.2rem;
+  overflow-x: hidden;
 }
 
 h1,
@@ -13,7 +17,7 @@ h2 {
 .cta {
   text-decoration: none;
   color: #f4e8d7;
-  padding: 0.6rem 1rem;
+  padding: 0.8rem 1.4rem;
   background-color: var(--accent-color);
   border-radius: 9999px;
 
@@ -22,6 +26,7 @@ h2 {
   align-items: center;
   gap: 0.6rem;
   transition: all 0.2s ease;
+  user-select: none;
 }
 
 .cta:hover {
@@ -31,5 +36,11 @@ h2 {
   transition: all 0.2s ease;
 }
 .cta:hover svg {
-  transform: translateX(0.25rem);
+  transform: translateX(0.2rem);
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 0 10rem;
+  }
 }

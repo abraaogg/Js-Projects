@@ -47,4 +47,10 @@ body {
 
 :root {
   --accent-color: #243f59;
+  --subtext-color: #65798A;
+}
+
+::selection {
+  color: #ffff; /* Changes highlighted text color */
+  background-color: #90C2E7; /* Changes highlight background color */
 }
