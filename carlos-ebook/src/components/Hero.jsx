@@ -25,7 +25,7 @@ function Hero() {
 
         <div className="hero-actions">
           <a href="#comprar" className="cta">
-            Quero meu ebook  <span className="arrow">→</span>
+            Quero meu ebook
           </a>
 
           <span className="hero-note">
