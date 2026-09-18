@@ -1,7 +1,8 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Benefits from "./components/Benefits";
+import EbookFeatures from "./components/EbookFeatures";
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <div className="sun-glow-soft"></div>
       <Header />
       <Hero/>
+      <Benefits/>
+      <EbookFeatures/>
     </>
   );
 }

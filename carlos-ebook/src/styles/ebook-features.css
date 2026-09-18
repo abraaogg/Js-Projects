@@ -1,0 +1,50 @@
+.ebook-features {
+  margin-top: 3rem;
+}
+
+.ebook-features h2 {
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.4rem 1.2rem;
+  background-color: #fffaf0;
+  border: 1px solid #e3d8c2;
+  border-radius: 9999px;
+  color: var(--subtext-color);
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.feature:hover{
+  transform:  translateY(-2px);
+}
+
+.feature svg {
+  flex-shrink: 0;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ebook-features h2 {
+    font-size: 2.5rem;
+  }
+
+  .features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
