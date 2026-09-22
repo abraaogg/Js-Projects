@@ -2,12 +2,6 @@
   margin-top: 3rem;
 }
 
-.ebook-features h2 {
-  margin-bottom: 2rem;
-  color: var(--accent-color);
-  font-size: 2rem;
-}
-
 .features-list {
   display: flex;
   flex-direction: column;
@@ -19,16 +13,19 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1.4rem 1.2rem;
-  background-color: #fffaf0;
+
+  background-color: var(--text-background);
   border: 1px solid #e3d8c2;
   border-radius: 9999px;
+
   color: var(--subtext-color);
   font-size: 0.95rem;
+
   transition: transform 0.2s ease;
 }
 
-.feature:hover{
-  transform:  translateY(-2px);
+.feature:hover {
+  transform: translateY(-2px);
 }
 
 .feature svg {
@@ -36,6 +33,42 @@
   color: var(--accent-color);
   font-size: 0.8rem;
 }
+
+.section-quote {
+  width: 100%;
+  max-width: 670px;
+  margin: 4rem auto 0;
+  padding: 2.5rem 1.5rem;
+
+  box-sizing: border-box;
+  background-color: var(--text-background);
+  border: 1px solid #e3d8c2;
+  border-radius: 28px;
+
+  text-align: center;
+}
+
+.section-quote p {
+  max-width: 550px;
+  margin: 0 auto;
+
+  color: var(--accent-color);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.section-quote span {
+  display: block;
+  margin-top: 1.25rem;
+
+  color: var(--subtext-color);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+/* Desktop */
 
 @media screen and (min-width: 768px) {
   .ebook-features h2 {
@@ -46,5 +79,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .section-quote {
+    padding: 2.5rem 3rem;
+  }
+
+  .section-quote p {
+    font-size: 1.55rem;
   }
 }

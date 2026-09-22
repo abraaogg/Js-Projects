@@ -48,6 +48,7 @@ body {
 :root {
   --accent-color: #243f59;
   --subtext-color: #65798A;
+  --text-background:#FBF5E9;
 }
 
 ::selection {

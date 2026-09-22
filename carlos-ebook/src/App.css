@@ -7,10 +7,17 @@ body {
 }
 
 h1,
-h2,
 h3 {
   font-family: "Fraunces", serif;
   color: var(--accent-color);
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .cta {

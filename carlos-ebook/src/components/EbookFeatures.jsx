@@ -38,6 +38,13 @@ function EbookFeatures() {
             <span>Bônus: sequência de 10 minutos</span>
           </div>
         </div>
+        <blockquote className="section-quote">
+          <p>
+            “Cuidar da coluna não exige academia — exige constância nos gestos
+            certos.”
+          </p>
+          <span>Carlos Foa · Educação Física</span>
+        </blockquote>
       </section>
       <div className="section-divider"></div>
     </>
