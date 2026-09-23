@@ -5,6 +5,7 @@ import Benefits from "./components/Benefits";
 import EbookFeatures from "./components/EbookFeatures";
 import Testimonials from "./components/Testimonials";
 import VideoTestimonial from "./components/VideoTestimonial";
+import FinalCTA from "./components/FinalCTA";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <EbookFeatures />
       <Testimonials />
       <VideoTestimonial />
+      <FinalCTA/>
     </>
   );
 }

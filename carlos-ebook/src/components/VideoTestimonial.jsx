@@ -6,6 +6,7 @@ function VideoTestimonial() {
     <>
       <section className="video-testimonials">
         <h2>Depoímentos em vídeo</h2>
+        <p>Veja como as práticas e a mentoria mudaram a rotina e a saúde de quem acompanha o trabalho.</p>
       </section>
     </>
   );
