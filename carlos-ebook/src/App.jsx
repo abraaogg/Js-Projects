@@ -6,19 +6,27 @@ import EbookFeatures from "./components/EbookFeatures";
 import Testimonials from "./components/Testimonials";
 import VideoTestimonial from "./components/VideoTestimonial";
 import FinalCTA from "./components/FinalCTA";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <div className="sun-glow"></div>
       <div className="sun-glow-soft"></div>
-      <Header />
-      <Hero />
-      <Benefits />
-      <EbookFeatures />
-      <Testimonials />
-      <VideoTestimonial />
-      <FinalCTA/>
+
+      <main>
+        <Header />
+        <Hero />
+        <Benefits />
+        <EbookFeatures />
+        <Testimonials />
+        <VideoTestimonial />
+        <FinalCTA />
+        <FAQ />
+      </main>
+
+      <Footer />
     </>
   );
 }

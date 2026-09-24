@@ -1,6 +1,5 @@
 .final-cta {
-
-    margin-inline: auto;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
@@ -48,36 +47,13 @@
   margin-bottom: 1rem;
   color: var(--accent-color);
   font-size: 2rem;
+  font-family: "Fraunces", serif;
   line-height: 1;
-}
-
-.final-cta-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-
-  padding: 0.8rem 1.5rem;
-
-  border: none;
-  border-radius: 2rem;
-
-  background-color: var(--accent-color);
-  color: white;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-.final-cta-button span {
-  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 768px) {
   .final-cta {
-      width: 50vw;
+    width: 50vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
