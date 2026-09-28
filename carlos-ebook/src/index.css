@@ -1,4 +1,8 @@
 /* Cor base do fundo */
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: oklch(0.937 0.028 84); /* creme #F4E8D7 */
 }

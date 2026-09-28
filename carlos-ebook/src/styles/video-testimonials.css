@@ -1,0 +1,86 @@
+.video-testimonials {
+  margin: 4rem 0;
+}
+
+.video-testimonials > p {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  color: var(--subtext-color);
+  line-height: 1.5;
+}
+
+.video-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.video-window {
+  flex: 1;
+  overflow: hidden;
+}
+
+.video-list {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.video-card {
+  min-width: 33.33%;
+  padding: 0 0.35rem;
+  box-sizing: border-box;
+}
+
+.video-placeholder {
+  aspect-ratio: 1;
+  background-color: #d8d0c3;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder span {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--text-background);
+}
+
+.video-card h3 {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+}
+
+.video-arrow {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--text-background);
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.video-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.video-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #d8d0c3;
+}
+
+.video-dots span.active {
+  background-color: var(--accent-color);
+}
