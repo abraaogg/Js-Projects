@@ -1,12 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 
+html,
 body {
-  font-family: "DM Sans", sans-serif;
   margin: 0;
   overflow-x: hidden;
 }
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   padding: 0 1.2rem;
+  box-sizing: border-box;
 }
 
 h1,
