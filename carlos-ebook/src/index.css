@@ -25,6 +25,11 @@ main {
   overflow-x: clip;
   background-color: oklch(0.937 0.028 84);
 }
+/* glow index fixed, meand select every children from main, EXECPT .background-glow */
+main > *:not(.background-glow) {
+  position: relative;
+  z-index: 1;
+}
 
 h1,
 h3 {

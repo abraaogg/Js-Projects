@@ -18,14 +18,16 @@ function App() {
       </div>
 
       <main>
-        <Header />
-        <Hero />
-        <Benefits />
-        <EbookFeatures />
-        <Testimonials />
-        <VideoTestimonial />
-        <FinalCTA />
-        <FAQ />
+        <div className="content">
+          <Header />
+          <Hero />
+          <Benefits />
+          <EbookFeatures />
+          <Testimonials />
+          <VideoTestimonial />
+          <FinalCTA />
+          <FAQ />
+        </div>
       </main>
 
       <Footer />
