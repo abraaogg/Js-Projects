@@ -1,61 +1,84 @@
-/* Cor base do fundo */
-html {
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+html,
+body {
+  margin: 0;
   overflow-x: hidden;
 }
 
 body {
-  background-color: oklch(0.937 0.028 84); /* creme #F4E8D7 */
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--accent-color);
 }
 
-/* Brilho do sol (canto superior direito, "respirando") */
-.sun-glow {
-  position: absolute;
-  top: -160px;
-  right: -10%;
-  width: 560px;
-  height: 560px;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  overflow-x: clip;
+  background-color: oklch(0.937 0.028 84);
+}
+
+h1,
+h3 {
+  font-family: "Fraunces", serif;
+  color: var(--accent-color);
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.cta {
+  text-decoration: none;
+  color: #f4e8d7;
+  padding: 0.8rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--accent-color);
   border-radius: 9999px;
-  filter: blur(64px);
-  pointer-events: none;
-  background: radial-gradient(circle, oklch(0.83 0.08 72) 0%, transparent 70%);
-  animation: sun-breathe 9s ease-in-out infinite;
-  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  transition: transform 0.2s ease;
+  user-select: none;
 }
 
-/* Brilho suave (canto inferior esquerdo) */
-.sun-glow-soft {
-  position: absolute;
-  bottom: -20%;
-  left: -15%;
-  width: 480px;
-  height: 480px;
-  border-radius: 9999px;
-  opacity: 0.4;
-  filter: blur(64px);
-  pointer-events: none;
-  background: radial-gradient(circle, oklch(0.88 0.055 76) 0%, transparent 70%);
-  z-index: -1;
+.cta:hover {
+  transform: scale(1.05);
 }
 
-@keyframes sun-breathe {
-  0%,
-  100% {
-    opacity: 0.55;
-    transform: scale(1);
+.cta svg {
+  transition: transform 0.2s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0.2rem);
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  margin: 4rem 0;
+  background-color: #e2d2b2d2;
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    padding: 0 10rem;
   }
-  50% {
-    opacity: 0.85;
-    transform: scale(1.08);
-  }
-}
-
-:root {
-  --accent-color: #243f59;
-  --subtext-color: #65798A;
-  --text-background:#FBF5E9;
-}
-
-::selection {
-  color: #ffff; /* Changes highlighted text color */
-  background-color: #90C2E7; /* Changes highlight background color */
 }

@@ -12,8 +12,10 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="sun-glow"></div>
-      <div className="sun-glow-soft"></div>
+      <div className="background-glow">
+        <div className="sun-glow"></div>
+        <div className="sun-glow-soft"></div>
+      </div>
 
       <main>
         <Header />
