@@ -1,0 +1,13 @@
+h1,
+h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+p{
+    opacity: 0.8;
+}
+
+::selection {
+  color: #fff;
+  background-color: #fcbf49;
+}

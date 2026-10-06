@@ -1,14 +1,13 @@
 import "../styles/header.css";
-import pawIcon from "../images/paw-icon.svg";
+import { FaPaw } from "react-icons/fa";
 
 function Header() {
   return (
     <div className="header">
       <a className="logo" href="">
-        <img src={pawIcon} alt="paw-icon" className="paw-icon" />
+        <FaPaw  className="paw-icon" />
         Luma
       </a>
-
       <nav className="nav">
         <a href="">Services</a>
         <a href="">Team</a>
