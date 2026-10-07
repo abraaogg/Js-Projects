@@ -4,6 +4,7 @@ body {
   background-color: oklch(0.96 0.01 240);
   position: relative;
   font-family: "Inter", sans-serif;
+  color: #1B2B36;
 }
 
 .background-layer {

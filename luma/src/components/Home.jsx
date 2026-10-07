@@ -36,6 +36,9 @@ function Home() {
           Gentle checkups, honest advice, and zero clinical coldness. We treat
           every tail-wag and slow blink like a first visit.
         </p>
+
+        <a className="book-cta" href="">Book a visit</a>
+  
       </div>
 
       <img src={dogImg} alt="dog image" className="dog-image" />
