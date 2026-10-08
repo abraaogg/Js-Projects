@@ -31,7 +31,7 @@
 
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
-  color: #1596a8;
+  color: var(--accent-color);
 }
 
 .status-dot {
@@ -59,26 +59,23 @@
   color: #df6a59;
 }
 
-.home p {
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
-
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  user-select: none;
-}
-
 .home a {
   text-decoration: none;
 }
 
+.home .home-ctas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .home .book-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   padding: 0.8rem 1.2rem;
-  opacity: 0.8;
   border-radius: 999px;
   background: var(--accent-color);
   color: white;
@@ -87,6 +84,30 @@
   font-weight: 500;
 
   transition: all 0.2s ease;
+}
+
+.home .book-cta:hover {
+  transform: translateY(-0.3rem);
+}
+
+.cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.home .book-cta:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.home .explore-cta {
+  padding: 0.8rem 1.2rem;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+
+  color: #1b2b36;
 }
 
 .dog-image {

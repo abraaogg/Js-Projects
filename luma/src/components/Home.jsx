@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import dogImg from "../images/hero-dog.jpg";
+import { IoIosArrowForward } from "react-icons/io";
 
 function Home() {
   const now = new Date();
@@ -36,9 +37,15 @@ function Home() {
           Gentle checkups, honest advice, and zero clinical coldness. We treat
           every tail-wag and slow blink like a first visit.
         </p>
+        <div className="home-ctas">
+          <a className="book-cta" href="Book a checkup">
+            Book a checkup <IoIosArrowForward className="cta-arrow" />
+          </a>
 
-        <a className="book-cta" href="">Book a visit</a>
-  
+          <a className="explore-cta" href="">
+            Explore care
+          </a>
+        </div>
       </div>
 
       <img src={dogImg} alt="dog image" className="dog-image" />

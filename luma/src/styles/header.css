@@ -33,7 +33,7 @@
 
 .paw-icon {
   font-size: 1.6rem;
-  color: #15959b;
+  color: var(--accent-color);
 }
 
 .nav {

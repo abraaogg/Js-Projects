@@ -9,9 +9,9 @@ function App() {
         <div class="sky-blob"></div>
         <div class="coral-blob"></div>
         <div class="sun-blob"></div>
-        <Header />
-        <Home />
       </div>
+      <Header />
+      <Home />
     </>
   );
 }
