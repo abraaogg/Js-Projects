@@ -5,7 +5,6 @@
 
   width: calc(100% - 2rem);
   margin: 0 auto;
-  padding-top: 4rem;
   gap: 2rem;
 }
 
@@ -59,6 +58,11 @@
   color: #df6a59;
 }
 
+.home p {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
 .home a {
   text-decoration: none;
 }
@@ -68,6 +72,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  font-size: 0.9rem;
 }
 
 .home .book-cta {
@@ -80,7 +85,6 @@
   background: var(--accent-color);
   color: white;
 
-  font-size: 1rem;
   font-weight: 500;
 
   transition: all 0.2s ease;
@@ -101,18 +105,26 @@
 .home .explore-cta {
   padding: 0.8rem 1.2rem;
 
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.384);
   backdrop-filter: blur(10px);
 
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 999px;
 
   color: #1b2b36;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.home .explore-cta:hover {
+  background: rgba(255, 255, 255, 0.699);
+  backdrop-filter: blur(10px);
 }
 
 .dog-image {
-  width: 50%;
-  height: 400px;
+  width: 80%;
+  max-height: 300px;
+  margin: 0 auto;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -128,5 +140,14 @@
 
   .home h1 {
     font-size: 5rem;
+  }
+
+  .home p {
+    max-width: 80%;
+  }
+
+  .dog-image {
+    width: 30%;
+      max-height: 350px;
   }
 }

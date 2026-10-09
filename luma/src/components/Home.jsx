@@ -34,8 +34,7 @@ function Home() {
         </h1>
 
         <p>
-          Gentle checkups, honest advice, and zero clinical coldness. We treat
-          every tail-wag and slow blink like a first visit.
+          Gentle checkups, honest advice, and zero clinical coldness.
         </p>
         <div className="home-ctas">
           <a className="book-cta" href="Book a checkup">

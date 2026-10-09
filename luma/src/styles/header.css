@@ -62,8 +62,6 @@
 @media (min-width: 768px) {
   .header {
     width: min(1100px, 80%);
-    margin: 1.4rem auto;
-    padding: 1.4rem;
   }
 
   .nav {
