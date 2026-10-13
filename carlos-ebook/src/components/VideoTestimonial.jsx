@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import "../styles/video-testimonials.css";
+import renatoImg from "../images/pexels-renato.jpg";
+import lucasImg from "../images/lucas-gabriel.jpg";
+import leonardoImg from "../images/leonardodourado.jpg";
+import pessoasImg from "../images/pexels-pessoas.jpg";
+import pessoas1Img from "../images/pexels-pessoas-1.jpg";
 
 function VideoTestimonial() {
   const [activeVideo, setActiveVideo] = useState(0);
 
-  const videos = [
-    { id: 1, title: "Depoimento 1" },
-    { id: 2, title: "Depoimento 2" },
-    { id: 3, title: "Depoimento 3" },
-    { id: 4, title: "Depoimento 4" },
-    { id: 5, title: "Depoimento 5" },
-  ];
+const videos = [
+  { id: 1, title: "Depoimento 1", image: renatoImg },
+  { id: 2, title: "Depoimento 2", image: lucasImg },
+  { id: 3, title: "Depoimento 3", image: leonardoImg },
+  { id: 4, title: "Depoimento 4", image: pessoasImg },
+  { id: 5, title: "Depoimento 5", image: pessoas1Img },
+];
 
   function nextVideo() {
     setActiveVideo((prev) => (prev + 1) % videos.length);
@@ -22,9 +27,13 @@ function VideoTestimonial() {
     );
   }
 
-  const visibleVideos = [0, 1, 2].map(
-    (offset) => videos[(activeVideo + offset) % videos.length]
-  );
+
+const visibleVideos = [
+  videos[(activeVideo - 1 + videos.length) % videos.length],
+  videos[activeVideo],
+  videos[(activeVideo + 1) % videos.length],
+];
+
 
   return (
     <section className="video-testimonials">
@@ -41,10 +50,11 @@ function VideoTestimonial() {
         </button>
 
         <div className="video-window">
-          <div className="video-list">
+          <div className="video-list" key={activeVideo}>
             {visibleVideos.map((video) => (
               <article className="video-card" key={video.id}>
                 <div className="video-placeholder">
+                   <img src={video.image} alt={video.title} />
                   <span>▶</span>
                 </div>
 
