@@ -1,5 +1,6 @@
-import React from "react";
 import "../styles/final-cta.css";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 function FinalCTA() {
   return (
@@ -16,7 +17,8 @@ function FinalCTA() {
 
           <button className="cta">
             Quero agora
-            <span>→</span>
+           <FaWhatsapp />
+
           </button>
         </div>
       </section>

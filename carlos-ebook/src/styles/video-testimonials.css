@@ -1,5 +1,7 @@
 .video-testimonials {
   margin: 4rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .video-testimonials > p {
@@ -7,20 +9,22 @@
   margin-bottom: 2rem;
   color: var(--subtext-color);
   line-height: 1.5;
+  padding: 0 0.5rem;
 }
 
 .video-carousel {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  width: calc(100% + 2.4rem);
+  margin-left: -1.2rem;
 }
-
-
 
 .video-window {
   flex: 1;
   min-width: 0;
+  width: 100%;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .video-list {
@@ -28,6 +32,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 0;
+  animation: videoSlide 0.45s ease-in-out;
 }
 
 .video-card {
@@ -40,10 +45,9 @@
   flex-basis: 80%;
 }
 
-
 .video-placeholder {
   position: relative;
-  aspect-ratio: 2 / 5;
+  aspect-ratio: 3 / 5;
   overflow: hidden;
   background-color: #d8d0c3;
   border-radius: 1rem;
@@ -63,11 +67,6 @@
 .video-placeholder span {
   position: relative;
   z-index: 1;
-}
-
-
-
-.video-placeholder span {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
@@ -84,6 +83,7 @@
 }
 
 .video-arrow {
+  display: none;
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
@@ -112,19 +112,10 @@
   background-color: var(--accent-color);
 }
 
-
-.video-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0;
-  animation: videoFade 0.35s ease;
-}
-
-@keyframes videoFade {
+@keyframes videoSlide {
   from {
-    opacity: 0.5;
-    transform: translateX(12px);
+    opacity: 0.7;
+    transform: translateX(25px);
   }
 
   to {
@@ -132,7 +123,6 @@
     transform: translateX(0);
   }
 }
-
 
 /* Desktop */
 
@@ -151,13 +141,19 @@
     max-width: 600px;
     font-size: 1.1rem;
     margin-bottom: 3rem;
+    padding: 0;
   }
 
   .video-carousel {
     gap: 1.5rem;
   }
 
+  .video-window {
+    width: auto;
+  }
+
   .video-arrow {
+    display: block;
     width: 2.75rem;
     height: 2.75rem;
     font-size: 1.2rem;
@@ -173,7 +169,7 @@
   }
 
   .video-placeholder {
-    aspect-ratio: 3 / 5;
+    aspect-ratio: 4 / 5;
     border-radius: 1.25rem;
   }
 
