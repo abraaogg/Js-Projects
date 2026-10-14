@@ -37,13 +37,13 @@
 }
 
 .video-card:nth-child(2) {
-  flex-basis: 70%;
+  flex-basis: 80%;
 }
 
 
 .video-placeholder {
   position: relative;
-  aspect-ratio: 3 / 5;
+  aspect-ratio: 2 / 5;
   overflow: hidden;
   background-color: #d8d0c3;
   border-radius: 1rem;
@@ -173,7 +173,7 @@
   }
 
   .video-placeholder {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 5;
     border-radius: 1.25rem;
   }
 
