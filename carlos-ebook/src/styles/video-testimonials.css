@@ -1,3 +1,4 @@
+
 .video-testimonials {
   margin: 4rem 0;
   width: 100%;
@@ -22,7 +23,6 @@
 .video-window {
   flex: 1;
   min-width: 0;
-  width: 100%;
   overflow: hidden;
   touch-action: pan-y;
 }
@@ -31,7 +31,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0;
   animation: videoSlide 0.45s ease-in-out;
 }
 
@@ -49,37 +48,15 @@
   position: relative;
   aspect-ratio: 3 / 5;
   overflow: hidden;
-  background-color: #d8d0c3;
+  background: #d8d0c3;
   border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.video-placeholder img {
+.video-placeholder video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  inset: 0;
-}
-
-.video-placeholder span {
-  position: relative;
-  z-index: 1;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  color: var(--text-background);
-}
-
-.video-card h3 {
-  margin: 0.6rem 0 0;
-  font-size: 0.9rem;
 }
 
 .video-arrow {
@@ -89,7 +66,7 @@
   height: 2rem;
   border: none;
   border-radius: 50%;
-  background-color: var(--text-background);
+  background: var(--text-background);
   color: var(--accent-color);
   cursor: pointer;
 }
@@ -101,15 +78,18 @@
   margin-top: 1rem;
 }
 
-.video-dots span {
+.video-dots button {
   width: 7px;
   height: 7px;
+  padding: 0;
+  border: none;
   border-radius: 50%;
-  background-color: #d8d0c3;
+  background: #d8d0c3;
+  cursor: pointer;
 }
 
-.video-dots span.active {
-  background-color: var(--accent-color);
+.video-dots button.active {
+  background: var(--accent-color);
 }
 
 @keyframes videoSlide {
@@ -145,11 +125,9 @@
   }
 
   .video-carousel {
+    width: 100%;
+    margin-left: 0;
     gap: 1.5rem;
-  }
-
-  .video-window {
-    width: auto;
   }
 
   .video-arrow {
@@ -173,17 +151,12 @@
     border-radius: 1.25rem;
   }
 
-  .video-card h3 {
-    font-size: 1rem;
-    margin-top: 0.9rem;
-  }
-
   .video-dots {
     margin-top: 1.5rem;
     gap: 0.6rem;
   }
 
-  .video-dots span {
+  .video-dots button {
     width: 9px;
     height: 9px;
   }

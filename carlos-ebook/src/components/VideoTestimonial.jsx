@@ -1,22 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/video-testimonials.css";
-import renatoImg from "../images/pexels-renato.jpg";
-import lucasImg from "../images/lucas-gabriel.jpg";
-import leonardoImg from "../images/leonardodourado.jpg";
-import pessoasImg from "../images/pexels-pessoas.jpg";
-import pessoas1Img from "../images/pexels-pessoas-1.jpg";
+import video1 from "../videos/video1.mp4";
+import video2 from "../videos/video2.mp4";
+import video3 from "../videos/video3.mp4";
 
 function VideoTestimonial() {
   const [activeVideo, setActiveVideo] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
 
-  const videos = [
-    { id: 1, title: "Depoimento 1", image: renatoImg },
-    { id: 2, title: "Depoimento 2", image: lucasImg },
-    { id: 3, title: "Depoimento 3", image: leonardoImg },
-    { id: 4, title: "Depoimento 4", image: pessoasImg },
-    { id: 5, title: "Depoimento 5", image: pessoas1Img },
-  ];
+  const videos = [video1, video2, video3];
 
   function nextVideo() {
     setActiveVideo((prev) => (prev + 1) % videos.length);
@@ -42,7 +34,11 @@ function VideoTestimonial() {
       </p>
 
       <div className="video-carousel">
-        <button className="video-arrow" onClick={previousVideo}>
+        <button
+          className="video-arrow"
+          onClick={previousVideo}
+          aria-label="Vídeo anterior"
+        >
           ←
         </button>
 
@@ -51,35 +47,43 @@ function VideoTestimonial() {
           onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
           onTouchEnd={(e) => {
             const touchEnd = e.changedTouches[0].clientX;
-
             if (touchStart - touchEnd > 50) nextVideo();
             if (touchEnd - touchStart > 50) previousVideo();
           }}
         >
           <div className="video-list" key={activeVideo}>
-            {visibleVideos.map((video) => (
-              <article className="video-card" key={video.id}>
+            {visibleVideos.map((video, index) => (
+              <article className="video-card" key={`${activeVideo}-${index}`}>
                 <div className="video-placeholder">
-                  <img src={video.image} alt={video.title} />
-                  <span>▶</span>
+                  <video
+                    src={video}
+                    controls={index === 1}
+                    playsInline
+                    preload="metadata"
+                    tabIndex={index === 1 ? 0 : -1}
+                  />
                 </div>
-
-                <h3>{video.title}</h3>
               </article>
             ))}
           </div>
         </div>
 
-        <button className="video-arrow" onClick={nextVideo}>
+        <button
+          className="video-arrow"
+          onClick={nextVideo}
+          aria-label="Próximo vídeo"
+        >
           →
         </button>
       </div>
 
       <div className="video-dots">
-        {videos.map((video, index) => (
-          <span
-            key={video.id}
+        {videos.map((_, index) => (
+          <button
+            key={index}
             className={activeVideo === index ? "active" : ""}
+            onClick={() => setActiveVideo(index)}
+            aria-label={`Ir para vídeo ${index + 1}`}
           />
         ))}
       </div>
