@@ -3,12 +3,19 @@ import "../styles/video-testimonials.css";
 import video1 from "../videos/video1.mp4";
 import video2 from "../videos/video2.mp4";
 import video3 from "../videos/video3.mp4";
+import cover1 from "../images/cover1.png";
+import cover2 from "../images/cover2.png";
+import cover3 from "../images/cover3.png";
 
 function VideoTestimonial() {
   const [activeVideo, setActiveVideo] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
 
-  const videos = [video1, video2, video3];
+  const videos = [
+    { video: video1, cover: cover1 },
+    { video: video2, cover: cover2 },
+    { video: video3, cover: cover3 },
+  ];
 
   function nextVideo() {
     setActiveVideo((prev) => (prev + 1) % videos.length);
@@ -56,7 +63,8 @@ function VideoTestimonial() {
               <article className="video-card" key={`${activeVideo}-${index}`}>
                 <div className="video-placeholder">
                   <video
-                    src={video}
+                    src={video.video}
+                    poster={video.cover}
                     controls={index === 1}
                     playsInline
                     preload="metadata"
