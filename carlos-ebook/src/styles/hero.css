@@ -57,16 +57,23 @@
 }
 
 .hero-image {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  perspective: 1000px;
+  margin: 0 auto;
 }
 
 .hero-image img {
   width: 100%;
   max-width: 400px;
-  border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px 8px 8px 3px;
+  box-shadow:
+    8px 0 0 #d6d2c7,
+    12px 0 0 #bcb9af,
+    15px 20px 30px rgba(0, 0, 0, 0.2);
+  transform: rotateZ(2deg);
+
   user-select: none;
 }
 

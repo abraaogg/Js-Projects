@@ -1,9 +1,22 @@
 import "../styles/hero.css";
+import { useEffect } from "react";
+import gsap from "gsap";
 import ebookCover from "../images/ebook-cover.png";
 import { IoSunny } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 
 function Hero() {
+  useEffect(() => {
+    const animation = gsap.to(".hero-image img", {
+      y: -6,
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    return () => animation.kill();
+  }, []);
   return (
     <>
       <section className="hero">
@@ -36,10 +49,12 @@ function Hero() {
         </div>
 
         <div className="hero-image">
-          <img
-            src={ebookCover}
-            alt="Capa do ebook Coluna Forte e Articulações Ativas"
-          />
+          <div className="ebook-cover">
+            <img
+              src={ebookCover}
+              alt="Capa do ebook Coluna Forte e Articulações Ativas"
+            />
+          </div>
         </div>
       </section>
 

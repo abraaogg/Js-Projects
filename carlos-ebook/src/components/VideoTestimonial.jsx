@@ -60,7 +60,14 @@ function VideoTestimonial() {
         >
           <div className="video-list" key={activeVideo}>
             {visibleVideos.map((video, index) => (
-              <article className="video-card" key={`${activeVideo}-${index}`}>
+              <article
+                className={`video-card ${index !== 1 ? "side-video" : ""}`}
+                key={`${activeVideo}-${index}`}
+                onClick={() => {
+                  if (index === 0) previousVideo();
+                  if (index === 2) nextVideo();
+                }}
+              >
                 <div className="video-placeholder">
                   <video
                     src={video.video}

@@ -1,41 +1,32 @@
 import "../styles/ebook-features.css";
 import { FaCheck } from "react-icons/fa6";
+import mulher1 from "../images/mulher1-exercicio.jpg";
+import mulher2 from "../images/mulher2-exercicio.jpg";
+import peso from "../images/peso.jpg";
 
 function EbookFeatures() {
   return (
     <>
       <section className="ebook-features">
-        <h2>O que está no ebook</h2>
+        <h2>O que você vai encontrar no ebook</h2>
 
         <div className="features-list">
           <div className="feature">
-            <FaCheck />
-            <span>Rotina guiada de mobilidade para a coluna</span>
+            <img src={mulher1} alt="Mulher fazendo exercício de mobilidade" />
+            <h3>Exercícios seguros</h3>
+            <p>Movimentos práticos, sem precisar de equipamentos.</p>
           </div>
 
           <div className="feature">
-            <FaCheck />
-            <span>Alongamentos para ombros, quadril e joelhos</span>
+            <img src={mulher2} alt="Mulher praticando alongamento" />
+            <h3>Prevenção no dia a dia</h3>
+            <p>Hábitos simples para cuidar da coluna e reduzir desconfortos.</p>
           </div>
 
           <div className="feature">
-            <FaCheck />
-            <span>Exercícios seguros, sem equipamentos</span>
-          </div>
-
-          <div className="feature">
-            <FaCheck />
-            <span>Como prevenir dores no dia a dia</span>
-          </div>
-
-          <div className="feature">
-            <FaCheck />
-            <span>Progressões para diferentes níveis</span>
-          </div>
-
-          <div className="feature">
-            <FaCheck />
-            <span>Bônus: sequência de 10 minutos</span>
+            <img src={peso} alt="Equipamento para exercícios" />
+            <h3>Progressões</h3>
+            <p>Para diferentes os níveis.</p>
           </div>
         </div>
         <blockquote className="section-quote">
