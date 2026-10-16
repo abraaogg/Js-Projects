@@ -22,7 +22,7 @@ function FAQ() {
     },
     {
       question: "Por quanto tempo tenho acesso?",
-      answer: "Você terá acesso ao material após a confirmação da compra.",
+      answer: "Você terá acesso vitalício após a confirmação da compra.",
     },
   ];
 

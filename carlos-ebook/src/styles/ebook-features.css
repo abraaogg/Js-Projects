@@ -21,12 +21,9 @@
   border: 1px solid #e3d8c2;
   border-radius: 20px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.feature:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(36, 63, 89, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .feature img {
@@ -49,18 +46,6 @@
   color: var(--subtext-color);
   font-size: 0.95rem;
   line-height: 1.6;
-}
-
-.feature-badge {
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  background: var(--accent-color);
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
 }
 
 .section-quote {
@@ -104,6 +89,11 @@
 
   .feature {
     padding: 1.5rem;
+  }
+
+  .feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(36, 63, 89, 0.08);
   }
 
   .section-quote {
