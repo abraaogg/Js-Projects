@@ -60,11 +60,13 @@ h2 {
   gap: 0.6rem;
 
   transition: transform 0.2s ease;
+  border: none;
   user-select: none;
 }
 
 .cta:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .cta svg {

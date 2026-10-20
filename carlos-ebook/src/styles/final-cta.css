@@ -1,28 +1,45 @@
-.final-cta {
-  margin-inline: auto;
 
+.final-cta {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
-
-  padding: 2rem;
-
-  background-color: var(--text-background);
+  padding: 4rem 2rem 2rem;
+  background: var(--text-background);
   border: 1px solid #e3d8c2;
   border-radius: 1.5rem;
+}
+
+.final-cta-label {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: var(--accent-color);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+
+.final-cta-label::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  margin: 0 0.5rem 0.2rem 0;
+  background: #c99b61;
 }
 
 .final-cta-content {
   display: flex;
   flex-direction: column;
+  gap: 0.6rem;
 }
 
 .final-cta-content h2 {
-  margin: 0 0 0.6rem;
-  color: var(--accent-color);
-  font-size: 1.6rem;
-  width: max-content;
+  margin: 0;
+  font-size: 1.8rem;
 }
 
 .final-cta-content p {
@@ -36,30 +53,69 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.6rem;
 }
 
-.final-cta-label {
-  margin-bottom: 0.2rem;
+.final-cta-prices {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.final-cta-old-price {
+  color: var(--subtext-color);
+  font-size: 0.85rem;
+  text-decoration: line-through;
+}
+
+.final-cta-discount {
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
+  background: #f0e5d0;
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.final-cta-price {
+  color: var(--accent-color);
+  font-family: "Fraunces", serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.final-cta-currency {
+  font-size: 1.2rem;
+}
+
+.final-cta-cents {
+  font-size: 1.6rem;
+  vertical-align: 0.65em;
+}
+
+.final-cta-payment {
   color: var(--subtext-color);
   font-size: 0.75rem;
 }
 
-.final-cta-price {
-  margin-bottom: 1rem;
-  color: var(--accent-color);
-  font-size: 2rem;
-  font-family: "Fraunces", serif;
-  line-height: 1;
-}
-
 @media screen and (min-width: 768px) {
   .final-cta {
-    width: 50vw;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    padding: 2.5rem;
+    padding: 4rem 2.5rem 2.5rem;
+  }
+
+  .final-cta-label {
+    left: 2.5rem;
+  }
+
+  .final-cta-content {
+    flex: 1;
+    min-width: 0;
   }
 
   .final-cta-content h2 {
@@ -67,6 +123,6 @@
   }
 
   .final-cta-offer {
-    align-items: flex-end;
+    flex-shrink: 0;
   }
 }

@@ -5,39 +5,44 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-
         <div className="footer-brand">
-          <h2>Carlos Foa</h2>
+          <h2>Carlos Oliveira</h2>
 
           <span className="footer-line"></span>
 
           <p>
-            Educação física prática e acessível para
-            uma vida com mais saúde e movimento.
+            Educação física prática e acessível para uma vida com mais saúde e
+            movimento.
           </p>
         </div>
 
         <div className="footer-contact">
           <h3>Contato</h3>
 
-          <a href="mailto:contato@carlosfoa.com.br">
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=carlos.oliveira.cf49@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaEnvelope />
-            <span>contato@carlosfoa.com.br</span>
+            <span>carlos.oliveira.cf49@gmail.com</span>
           </a>
 
-          <a href="#">
+          <a
+            href="https://www.instagram.com/carlos.filipeoficial/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
-            <span>@carlosfoa.educacao</span>
+            <span>@carlos.filipeoficial</span>
           </a>
-
         </div>
-
       </div>
 
       <div className="footer-bottom">
         <p>
-          © {new Date().getFullYear()} Carlos Foa · Educação Física.
-          Todos os direitos reservados.
+          © {new Date().getFullYear()} Carlos Foa · Educação Física. Todos os
+          direitos reservados.
         </p>
       </div>
     </footer>
