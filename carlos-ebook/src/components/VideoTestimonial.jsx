@@ -6,6 +6,8 @@ import video3 from "../videos/video3.mp4";
 import cover1 from "../images/cover1.png";
 import cover2 from "../images/cover2.png";
 import cover3 from "../images/cover3.png";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 function VideoTestimonial() {
   const [activeVideo, setActiveVideo] = useState(0);
@@ -46,7 +48,7 @@ function VideoTestimonial() {
           onClick={previousVideo}
           aria-label="Vídeo anterior"
         >
-          ←
+          <IoIosArrowBack />
         </button>
 
         <div
@@ -88,7 +90,7 @@ function VideoTestimonial() {
           onClick={nextVideo}
           aria-label="Próximo vídeo"
         >
-          →
+          <IoIosArrowForward />
         </button>
       </div>
 

@@ -60,14 +60,6 @@
 
 .video-arrow {
   display: none;
-  flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  border-radius: 50%;
-  background: var(--text-background);
-  color: var(--accent-color);
-  cursor: pointer;
 }
 
 .video-dots {
@@ -130,10 +122,28 @@
   }
 
   .video-arrow {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     width: 2.75rem;
     height: 2.75rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--text-background);
+    color: var(--accent-color);
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .video-arrow:active {
+    transform: scale(0.8);
+  }
+
+  .video-arrow svg {
+    transform: translate(1px, -1px);
   }
 
   .video-card {
