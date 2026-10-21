@@ -99,6 +99,19 @@
   font-size: 0.75rem;
 }
 
+.final-cta .cta {
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .final-cta {
     width: 100%;

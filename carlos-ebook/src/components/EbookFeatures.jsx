@@ -26,7 +26,7 @@ function EbookFeatures() {
           <div className="feature">
             <img src={peso} alt="Equipamento para exercícios" />
             <h3>Progressões</h3>
-            <p>Para diferentes os níveis.</p>
+            <p>Para todos os níveis.</p>
           </div>
         </div>
         <blockquote className="section-quote">

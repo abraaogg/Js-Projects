@@ -48,8 +48,3 @@
     transform: scale(1.08);
   }
 }
-
-::selection {
-  color: #fff;
-  background-color: #90c2e7;
-}

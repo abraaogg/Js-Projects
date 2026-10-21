@@ -4,6 +4,7 @@ import gsap from "gsap";
 import ebookCover from "../images/ebook-cover.png";
 import { IoSunny } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Hero() {
   useEffect(() => {
@@ -38,10 +39,20 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="#comprar" className="cta">
-              Quero meu ebook
+            <a
+              href="#final-cta"
+              className="cta"
+              onClick={(e) => {
+                e.preventDefault();
+                gsap.to(window, {
+                  duration: 1.2,
+                  scrollTo: "#final-cta",
+                  ease: "power2.inOut",
+                });
+              }}
+            >
+              Quero meu ebook <IoIosArrowDown />
             </a>
-
             <span className="hero-note">
               <FaCheck /> Leia direto no celular
             </span>
