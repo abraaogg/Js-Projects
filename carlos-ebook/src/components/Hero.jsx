@@ -5,6 +5,9 @@ import ebookCover from "../images/ebook-cover.png";
 import { IoSunny } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 function Hero() {
   useEffect(() => {
