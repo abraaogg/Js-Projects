@@ -8,7 +8,9 @@ function FinalCTA() {
         <span className="final-cta-label">OFERTA ESPECIAL</span>
 
         <div className="final-cta-content">
-          <h2>Invista no seu bem-estar</h2>
+          <h2>
+            Invista no seu <br /> bem-estar
+          </h2>
           <p>Um pequeno passo hoje, uma grande mudança amanhã.</p>
         </div>
 
