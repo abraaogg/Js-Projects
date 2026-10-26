@@ -4,10 +4,10 @@ import "../styles/loading-screen.css";
 
 export default function LoadingScreen({ onFinish }) {
   const [progress, setProgress] = useState(0);
-  const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
+    let exitCall;
 
     async function loadPage() {
       const images = Array.from(document.images);
@@ -30,8 +30,8 @@ export default function LoadingScreen({ onFinish }) {
 
       setProgress(100);
 
-      gsap.delayedCall(0.6, () => {
-        if (!cancelled) setIsExiting(true);
+      exitCall = gsap.delayedCall(0.6, () => {
+        if (!cancelled) onFinish();
       });
     }
 
@@ -39,12 +39,9 @@ export default function LoadingScreen({ onFinish }) {
 
     return () => {
       cancelled = true;
+      exitCall?.kill();
     };
-  }, []);
-
-  useEffect(() => {
-    if (isExiting) onFinish();
-  }, [isExiting, onFinish]);
+  }, [onFinish]);
 
   return (
     <div className="loading-screen">

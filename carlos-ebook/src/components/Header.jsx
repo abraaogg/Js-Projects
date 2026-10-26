@@ -1,6 +1,6 @@
-import "../styles/header.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import "../styles/header.css";
 
 function Header() {
   const headerRef = useRef(null);
@@ -19,11 +19,11 @@ function Header() {
   }, []);
 
   return (
-    <div className="header" ref={headerRef}>
+    <header className="header" ref={headerRef}>
       <a className="logo" href="#">
         Carlos Oliveira
       </a>
-    </div>
+    </header>
   );
 }
 

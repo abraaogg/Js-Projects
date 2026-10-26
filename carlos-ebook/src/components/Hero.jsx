@@ -1,11 +1,11 @@
-import "../styles/hero.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import ebookCover from "../images/ebook-cover.png";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { IoSunny } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import ebookCover from "../images/ebook-cover.png";
+import "../styles/hero.css";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -66,6 +66,16 @@ function Hero() {
     return () => ctx.revert();
   }, []);
 
+  const scrollToOffer = (e) => {
+    e.preventDefault();
+
+    gsap.to(window, {
+      duration: 1.2,
+      scrollTo: "#final-cta",
+      ease: "power2.inOut",
+    });
+  };
+
   return (
     <>
       <section className="hero" ref={heroRef}>
@@ -76,7 +86,8 @@ function Hero() {
           </span>
 
           <h1>
-            Coluna forte e<br />
+            Coluna forte e
+            <br />
             articulações ativas
           </h1>
 
@@ -87,23 +98,13 @@ function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a
-              href="#final-cta"
-              className="cta"
-              onClick={(e) => {
-                e.preventDefault();
-                gsap.to(window, {
-                  duration: 1.2,
-                  scrollTo: "#final-cta",
-                  ease: "power2.inOut",
-                });
-              }}
-            >
+            <a href="#final-cta" className="cta" onClick={scrollToOffer}>
               Quero meu ebook <IoIosArrowDown />
             </a>
 
             <span className="hero-note">
-              <FaCheck /> Leia direto no celular
+              <FaCheck />
+              Leia direto no celular
             </span>
           </div>
         </div>
@@ -118,7 +119,7 @@ function Hero() {
         </div>
       </section>
 
-      <div className="section-divider"></div>
+      <div className="section-divider" />
     </>
   );
 }

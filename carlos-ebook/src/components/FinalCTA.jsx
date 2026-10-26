@@ -2,6 +2,10 @@ import "../styles/final-cta.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 function FinalCTA() {
+  const whatsappUrl = `https://wa.me/553398006488?text=${encodeURIComponent(
+    "Olá! Tenho interesse no ebook Coluna Forte e Articulações Ativas.",
+  )}`;
+
   return (
     <>
       <section className="final-cta" id="final-cta">
@@ -27,24 +31,19 @@ function FinalCTA() {
 
           <span className="final-cta-payment">pagamento único</span>
 
-          <button
+          <a
             className="cta"
-            onClick={() =>
-              window.open(
-                `https://wa.me/553398006488?text=${encodeURIComponent(
-                  "Olá! Tenho interesse no ebook Coluna Forte e Articulações Ativas.",
-                )}`,
-                "_blank",
-              )
-            }
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Quero agora
             <FaWhatsapp />
-          </button>
+          </a>
         </div>
       </section>
 
-      <div className="section-divider"></div>
+      <div className="section-divider" />
     </>
   );
 }

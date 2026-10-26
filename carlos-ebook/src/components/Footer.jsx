@@ -1,4 +1,3 @@
-
 import "../styles/footer.css";
 import { FaEnvelope, FaInstagram } from "react-icons/fa";
 
@@ -9,11 +8,7 @@ function Footer() {
         <h2>Carlos Oliveira</h2>
 
         <div className="footer-contact">
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=carlos.oliveira.cf49@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:carlos.oliveira.cf49@gmail.com">
             <FaEnvelope />
             Email
           </a>

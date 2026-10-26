@@ -1,5 +1,4 @@
 import "../styles/ebook-features.css";
-import { FaCheck } from "react-icons/fa6";
 import mulher1 from "../images/mulher1-exercicio.jpg";
 import mulher2 from "../images/mulher2-exercicio.jpg";
 import peso from "../images/peso.jpg";
@@ -29,6 +28,7 @@ function EbookFeatures() {
             <p>Para todos os níveis.</p>
           </div>
         </div>
+
         <blockquote className="section-quote">
           <p>
             “Cuidar da coluna não exige academia — exige constância nos gestos
@@ -37,7 +37,8 @@ function EbookFeatures() {
           <span>Carlos Foa · Educação Física</span>
         </blockquote>
       </section>
-      <div className="section-divider"></div>
+
+      <div className="section-divider" />
     </>
   );
 }

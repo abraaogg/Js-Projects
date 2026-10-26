@@ -2,22 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 2rem;
   gap: 2.5rem;
+  margin-top: 2rem;
 }
 
 .hero-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   width: fit-content;
-  color: var(--subtext-color);
-  background-color: #fbf5e9;
   padding: 0.6rem 1.2rem;
-  font-size: 0.8rem;
   border: 2px solid #e0cb9f;
   border-radius: 9999px;
-  gap: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #fbf5e9;
+  color: var(--subtext-color);
+  font-size: 0.8rem;
 }
 
 .hero-badge svg {
@@ -34,34 +34,34 @@
 }
 
 .hero-content p {
+  max-width: 520px;
+  margin: 1rem 0 2rem;
   color: var(--subtext-color);
   font-size: 1.05rem;
   line-height: 1.6;
-  max-width: 520px;
-  margin: 1rem 0 2rem;
 }
 
 .hero-actions {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
 }
 
 .hero-note {
-  color: var(--subtext-color);
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  color: var(--subtext-color);
+  font-size: 0.9rem;
 }
 
 .hero-image {
-  width: 80%;
   display: flex;
   justify-content: center;
-  perspective: 1000px;
+  width: 80%;
   margin: 0 auto;
+  perspective: 1000px;
 }
 
 .hero-image img {
@@ -73,12 +73,10 @@
     12px 0 0 #bcb9af,
     15px 20px 30px rgba(0, 0, 0, 0.2);
   transform: rotateZ(2deg);
-
   user-select: none;
 }
 
-/* Desktop */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .hero {
     flex-direction: row;
     align-items: center;
@@ -90,15 +88,11 @@
   }
 
   .hero-actions {
-    align-items: center;
     flex-direction: row;
+    align-items: center;
   }
 
   .hero-image {
     width: auto;
-  }
-
-  .hero-image img {
-    width: 100%;
   }
 }

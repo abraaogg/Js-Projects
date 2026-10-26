@@ -6,8 +6,6 @@
   align-items: center;
   justify-content: center;
   background-color: oklch(0.937 0.028 84);
-  opacity: 1;
-  will-change: opacity;
 }
 
 .loading-content {
@@ -18,7 +16,7 @@
 .loading-name {
   display: block;
   margin-bottom: 2rem;
-  color: #243f59;
+  color: var(--accent-color);
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   letter-spacing: -0.04em;
@@ -32,14 +30,14 @@
 
 .loading-line-progress {
   height: 100%;
-  background: #243f59;
+  background: var(--accent-color);
   transition: width 0.3s ease;
 }
 
 .loading-percentage {
   display: block;
   margin-top: 0.75rem;
-  color: #667582;
+  color: var(--subtext-color);
   font-family: "DM Sans", sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.08em;

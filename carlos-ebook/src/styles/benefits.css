@@ -19,9 +19,9 @@
   width: 3rem;
   height: 3rem;
   margin-bottom: 1rem;
-  background-color: #fffaf0;
   border: 1px solid #e3d8c2;
   border-radius: 50%;
+  background-color: #fffaf0;
   color: var(--accent-color);
   font-size: 1.2rem;
 }
@@ -39,7 +39,7 @@
   line-height: 1.6;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .benefits {
     flex-direction: row;
     justify-content: space-between;

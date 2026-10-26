@@ -2,7 +2,6 @@
   margin-top: 4rem;
 }
 
-
 .testimonials-list {
   display: flex;
   flex-direction: column;
@@ -11,24 +10,21 @@
 
 .testimonial {
   padding: 1.5rem;
-
-  background-color: var(--text-background);
   border: 1px solid #e3d8c2;
   border-radius: 28px;
+  background-color: var(--text-background);
 }
 
 .testimonial-stars {
   display: flex;
   gap: 0.2rem;
   margin-bottom: 1rem;
-
   color: #e8b879;
   font-size: 0.8rem;
 }
 
 .testimonial p {
   margin: 0;
-
   color: var(--accent-color);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -37,12 +33,11 @@
 .testimonial span {
   display: block;
   margin-top: 1.2rem;
-
   color: var(--subtext-color);
   font-size: 0.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .testimonials h2 {
     font-size: 2.5rem;
   }
@@ -55,6 +50,5 @@
 
   .testimonial {
     min-height: 155px;
-    padding: 1.5rem;
   }
 }
