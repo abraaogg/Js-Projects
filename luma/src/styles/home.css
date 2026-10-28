@@ -121,6 +121,39 @@
   backdrop-filter: blur(10px);
 }
 
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  margin-top: 2rem;
+}
+.hero-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.highlight-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.highlight-dot.green {
+  background: var(--accent-color);
+}
+
+.highlight-dot.yellow {
+  background: var(--yellow);
+}
+
+.highlight-dot.coral {
+  background: var(--red);
+}
+
 .dog-image {
   width: 80%;
   max-height: 300px;

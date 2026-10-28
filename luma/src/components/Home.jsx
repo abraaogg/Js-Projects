@@ -33,9 +33,7 @@ function Home() {
           A sunny <span>playdate</span> <br /> with your vet.
         </h1>
 
-        <p>
-          Gentle checkups, honest advice, and zero clinical coldness.
-        </p>
+        <p>Gentle checkups, honest advice, and zero clinical coldness.</p>
         <div className="home-ctas">
           <a className="book-cta" href="Book a checkup">
             Book a checkup <IoIosArrowForward className="cta-arrow" />
@@ -44,6 +42,23 @@ function Home() {
           <a className="explore-cta" href="">
             Explore care
           </a>
+        </div>
+
+        <div className="hero-highlights">
+          <div className="hero-highlight">
+            <span className="highlight-dot green"></span>
+            <span>Same-day sick visits</span>
+          </div>
+
+          <div className="hero-highlight">
+            <span className="highlight-dot yellow"></span>
+            <span>Fear-free certified</span>
+          </div>
+
+          <div className="hero-highlight">
+            <span className="highlight-dot coral"></span>
+            <span>4.9 · 800+ reviews</span>
+          </div>
         </div>
       </div>
 
