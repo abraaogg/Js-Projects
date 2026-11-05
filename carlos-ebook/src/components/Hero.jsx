@@ -4,7 +4,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { IoSunny } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
-import ebookCover from "../images/ebook-cover.png";
+import ebookCover from "../images/ebook-cover.webp";
 import "../styles/hero.css";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -114,6 +114,7 @@ function Hero() {
             <img
               src={ebookCover}
               alt="Capa do ebook Coluna Forte e Articulações Ativas"
+              fetchPriority="high"
             />
           </div>
         </div>

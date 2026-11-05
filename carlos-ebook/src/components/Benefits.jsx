@@ -8,7 +8,7 @@ function Benefits() {
     <>
       <section className="benefits">
         <div className="benefit">
-          <div className="benefit-icon">
+          <div className="benefit-icon" aria-hidden="true">
             <LuHeartPulse />
           </div>
           <h3>Alívio das dores</h3>
@@ -16,7 +16,7 @@ function Benefits() {
         </div>
 
         <div className="benefit">
-          <div className="benefit-icon">
+          <div className="benefit-icon" aria-hidden="true">
             <IoAccessibility />
           </div>
           <h3>Mais mobilidade</h3>
@@ -24,14 +24,15 @@ function Benefits() {
         </div>
 
         <div className="benefit">
-          <div className="benefit-icon">
+          <div className="benefit-icon" aria-hidden="true">
             <FiSunrise />
           </div>
           <h3>Minutos por dia</h3>
           <p>Uma rotina simples, sem equipamentos.</p>
         </div>
       </section>
-      <div className="section-divider"></div>
+
+      <div className="section-divider" />
     </>
   );
 }

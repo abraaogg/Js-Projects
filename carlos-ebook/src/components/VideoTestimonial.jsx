@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "../styles/video-testimonials.css";
 import video1 from "../videos/video1.mp4";
 import video2 from "../videos/video2.mp4";
 import video3 from "../videos/video3.mp4";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function VideoTestimonial() {
   const [activeVideo, setActiveVideo] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
+  const touchStart = useRef(0);
 
-  const videos = [{ video: video1 }, { video: video2 }, { video: video3 }];
+  const videos = [
+    { video: video1 },
+    { video: video2 },
+    { video: video3 },
+  ];
 
   function nextVideo() {
     setActiveVideo((prev) => (prev + 1) % videos.length);
@@ -46,11 +49,15 @@ function VideoTestimonial() {
 
         <div
           className="video-window"
-          onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
+          onTouchStart={(e) => {
+            touchStart.current = e.touches[0].clientX;
+          }}
           onTouchEnd={(e) => {
             const touchEnd = e.changedTouches[0].clientX;
-            if (touchStart - touchEnd > 50) nextVideo();
-            if (touchEnd - touchStart > 50) previousVideo();
+            const difference = touchStart.current - touchEnd;
+
+            if (difference > 50) nextVideo();
+            if (difference < -50) previousVideo();
           }}
         >
           <div className="video-list" key={activeVideo}>
@@ -93,6 +100,7 @@ function VideoTestimonial() {
             className={activeVideo === index ? "active" : ""}
             onClick={() => setActiveVideo(index)}
             aria-label={`Ir para vídeo ${index + 1}`}
+            aria-current={activeVideo === index ? "true" : undefined}
           />
         ))}
       </div>

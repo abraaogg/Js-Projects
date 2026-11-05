@@ -25,7 +25,7 @@ function Testimonials() {
         <div className="testimonials-list">
           {testimonials.map(({ text, name }) => (
             <article className="testimonial" key={name}>
-              <div className="testimonial-stars" aria-label="5 estrelas">
+              <div className="testimonial-stars" role="img" aria-label="5 estrelas">
                 {Array.from({ length: 5 }, (_, i) => (
                   <FaStar key={i} />
                 ))}
