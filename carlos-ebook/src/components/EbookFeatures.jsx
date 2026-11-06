@@ -1,7 +1,7 @@
 import "../styles/ebook-features.css";
-import mulher1 from "../images/mulher1-exercicio.jpg";
-import mulher2 from "../images/mulher2-exercicio.jpg";
-import peso from "../images/peso.jpg";
+import mulher1 from "../images/mulher1-exercicio.webp";
+import mulher2 from "../images/mulher2-exercicio.webp";
+import peso from "../images/peso.webp";
 
 function EbookFeatures() {
   return (
