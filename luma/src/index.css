@@ -9,7 +9,6 @@ p{
     font-weight: 500;
 }
 
-::selection {
-  color: #fff;
-  background-color: #fcbf49;
+img{
+  user-select: none;
 }
